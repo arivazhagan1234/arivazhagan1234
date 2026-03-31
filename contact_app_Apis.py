@@ -2,7 +2,7 @@ import json
 from flask  import Flask, jsonify, request
 import os 
 
-
+#contact app project have perform Add,Save,Update,View,Delete operations  
 app=Flask(__name__)
 
 #file name
@@ -17,9 +17,12 @@ def load_contact():
                 return {}
     return {} 
 
+#Add operation
+
 @app.route('/add', methods=['POST'])
 def Add_contact():
     req=request.json
+
     name=req.get("name")
     phone=req.get("phone")
 
@@ -77,6 +80,7 @@ def Delete_contact(name):
         return jsonify({"message":"Deleted successfully"})
     else:
         return jsonify({"message":f"Contact {name} doesn't exist"})
+print ("Delete operation completed")
 
 @app.route('/view', methods=['GET'])
 def View_contacts():                                                                                                                 
