@@ -1,0 +1,9 @@
+ GET Input Image
+ Read Iamge 
+ IF image == picture:
+ exit
+ Else image == Text:
+ Read Text and analys
+ Store in dictionary
+ update the field 
+ return as new image
