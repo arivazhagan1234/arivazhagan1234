@@ -19,7 +19,7 @@ filesignature={
     b'ID3': 'MP3',
     b'ftyp': 'MP4',
 }
-
+#To know the file name
 def filename(file):
         with open(file, 'rb') as f:
             byte=f.read(8) 
@@ -30,12 +30,11 @@ def filename(file):
                 return name
         return "UNKNOWN"
         
-                    
+#To know create a folder based an file type                   
 def store_file_signature(source):
      for file in source.glob('*'):
           if file.is_file():
             type=filename(file)    
-           
 
             destfolder=dest/type
             destfolder.mkdir(parents=True, exist_ok=True)  
