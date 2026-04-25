@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as Ec
-from openpyxl import Workbook    
+from openpyxl import Workbook
+from openpyxl import load_workbook
+import os
 
 
 sheet_location=r'C:/Users/Admins/Downloads/WebScrabed.xlsx'
@@ -11,14 +13,24 @@ datetext="Published:"
 
 url='https://www.aiimsexams.ac.in/'
 
-wb=Workbook()
-ws=wb.active
-ws.title='Scrabed Data'
-
-def storedata(**args):
-    for result in args:
-        ws.append(result)
+def storedata(*args):
+    row=list(args)
+    print("type of result....", row)  
+    if not os.path.exists(sheet_location):
+        wb=Workbook()
+        ws=wb.active
+        ws.title='Web scrabed'
+        ws.append(row)
+    else:
+        wb=load_workbook(sheet_location)
+        ws=wb.active
+    ws.append(row)
     wb.save(sheet_location)
+
+
+
+
+    
 
 driver=webdriver.Chrome()
 driver.get(url)
@@ -35,15 +47,17 @@ html=driver.page_source
 links=driver.find_elements(By.TAG_NAME, 'a')
 print("Total number of links........",len(links))
 for lnk in links:
-    objlink=storedata()
-    objlink(lnk.text, lnk.get_attribute('href'))
-
+    linktext=lnk.text
+    linkurl=lnk.get_attribute('href')
+    storedata(linktext, linkurl)
 
 #Getting published date
 def publisheddate(xpath, datetext):
     pubdates=driver.find_elements(By.XPATH, xpath)
     print(type(pubdates))
     for a in pubdates:
-        storedata(a.text.split( )[1], a.text.split(datetext)[-1].strip())
+        textword=a.text.split( )[1]
+        dates=a.text.split(datetext)[-1].strip()
+        storedata(textword, dates)
       
 publisheddate(xpath, datetext)
