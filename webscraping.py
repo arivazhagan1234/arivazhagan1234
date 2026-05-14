@@ -1,4 +1,4 @@
-from selenium import webdriver 
+from selenium import webdriver   
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as Ec
@@ -11,11 +11,9 @@ import time
 
 sheet_location=r'C:/Users/Admins/Downloads/WebScrabed.xlsx'
 csv_location=r'C:/Users/Admins/Downloads/WebScrabed.csv'
-css01='h2'
-css02='h1'
-xpath1="//*[contains(text(),'Published')]"
-xpath2="Published:"
-productlabelxpath="//h2"
+allproductsxpath="//*[contains(@class,'a-section a-spacing-base desktop-grid-content-view')]"
+productlabelxpath=".//h2"
+ratingxpath=".//*[contains(@class,'a-row a-size-small')]"
 url='https://www.amazon.in/'
 
 #creat a new excel or reuse existing exel sheet
@@ -33,7 +31,7 @@ def storedata(*args):
     ws.append(row)
     wb.save(sheet_location)
 
-    newrow=df([row], columns=['Page Title', 'LinkText', 'URL'])
+    newrow=df([row], columns=['Page Title', 'Product Label', 'PRODUCT RATING','LinkText', 'URL'])
     #create new csv file if not have existing file or use existing file  
     if os.path.exists(csv_location):
         newrow.to_csv(csv_location, mode='a', header=False, index=False)
@@ -56,8 +54,8 @@ wait=WebDriverWait(driver,30)
 print(driver.title) 
 
 #Store the all urls
-pagedata=[]
-productlabels=[]
+pageurl=[]
+productdata=[]
 
 #Find all links the website
 links=driver.find_elements(By.TAG_NAME, 'a')
@@ -68,43 +66,55 @@ def pagelinks(links):
         linkurl=lnk.get_attribute('href')
         if linkurl and (linkurl.startswith('http://') or linkurl.startswith('https://')):
             print("inside of if Treue condition........", linktext, linkurl)
-            pagedata.append((linkurl, linktext))        
+            pageurl.append((linkurl, linktext))        
 pagelinks(links)    
 
+#to get product label and discription
+def productsdescription(allproductsxpath,productlabelxpath,ratingxpath):
+
+    allproducts=wait.until(Ec.presence_of_all_elements_located((By.XPATH, allproductsxpath)))
+    for product in allproducts:
+        try:
+            label=product.find_element(By.XPATH,productlabelxpath).text.strip()   
+        except TimeoutException:
+            label="No label found"
+           
+        try:
+            rating=product.find_element(By.XPATH,ratingxpath).text.strip()     
+        except TimeoutException:
+            rating="No rating"
+
+        productdata.append((label, rating))
+        print("Label:", label, "| Rating:", rating)
+    return productdata
+productsdescription(allproductsxpath,productlabelxpath,ratingxpath)
+
+'''  
 def productlabel(productlabelxpath):
     productlabels=wait.until(Ec.presence_of_all_elements_located((By.XPATH, productlabelxpath)))
-    for a in productlabels:
-        label=a.text.strip()
-        productlabels.append(label)
+    label=[l.text.strip() for l in productlabels if l.text.strip() != '']
+    return label
 
-print(pagedata)
+#to get product rating
+def productrating(ratingxpath):
+    rating=wait.until(Ec.presence_of_all_elements_located((By.XPATH, ratingxpath)))
+    productratings=[r.text for r in rating if r.text != '']
+    return productratings
+
+'''  
+print(pageurl)
 #store page title,url,urltext
-def allpagedata(pagedata, productlabelxpath):
-    for linkurl, linktext in pagedata:
+def allpageurl(pageurl,allproductsxpath,productlabelxpath,ratingxpath):
+    for linkurl, linktext in pageurl:
         try:
             driver.get(linkurl)
             pagetitle=driver.title
-            productlabel(productlabelxpath)
-            storedata(pagetitle,linkurl,linktext)
+            productsdes=productsdescription(allproductsxpath,productlabelxpath,ratingxpath)
+            for label,rating in productsdes:  
+                storedata(pagetitle, label, rating, linktext, linkurl)
         except TimeoutException:
             print("Time out url is ......",linkurl)
             driver.execute_script("window.stop();")
-allpagedata(pagedata, productlabelxpath)
+allpageurl(pageurl,allproductsxpath,productlabelxpath,ratingxpath)
+                                                                                   
 
-
-
-print("productlabels.......................", productlabels)
-
-
-"""
-#Getting published date
-def publisheddate(xpath1, xpath2):
-    pubdates=driver.find_elements(By.XPATH, xpath1)
-    print(type(pubdates))
-    for a in pubdates:
-        textword=a.t   ext.split( )[1]
-        dates=a.text.split(xpath2)[-1].strip()
-        storedata(textword, dates)
-      
-publisheddate(xpath1, xpath2)
-"""
