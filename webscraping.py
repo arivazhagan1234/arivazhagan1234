@@ -11,7 +11,7 @@ import time
 
 sheet_location=r'C:/Users/Admins/Downloads/WebScrabed.xlsx'
 csv_location=r'C:/Users/Admins/Downloads/WebScrabed.csv'
-allproductsxpath="//*[contains(@class,'a-section a-spacing-base desktop-grid-content-view')]"
+allproducts_xpath="//*[contains(@class,'a-section a-spacing-base desktop-grid-content-view')]"
 
 price_xpath=".//span[contains(@class,'a-price')]//span[@class='a-offscreen']"
 mrp_xpath=".//span[@data-a-strike='true']//span[@class='a-offscreen']"
@@ -24,15 +24,18 @@ product_img_url_xpath=".//img[contains(@class,'s-image')]"
 product_description_xpath=".//a"
 availability_xpath="//div[@id='availabilityInsideBuyBox_feature_div']//span"
 sold_by_xpath="//a[@data-csa-c-content-id='odf-desktop-merchant-info']"
+brand_xpath="//tr[contains(@class,'po-brand')]//span[@class='a-size-base po-break-word']"
 
-productlabelxpath=".//h2"
-ratingxpath=".//*[contains(@class,'a-row a-size-small')]"
+brand_header_xpath01="//a[contains(text(),'Brand')]"
+productlabel_xpath=".//h2"
+rating_xpath=".//span[@class='a-icon-alt']"
+review_xpath=".//span[contains(@class,'s-underline-text')]"
 url='https://www.amazon.in/'
 
 #Store the all urls
 pageurl=[]
 
-scraping=["https://www.amazon.in/computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc","https://www.amazon.in/s?rh=n%3A976392031%2Cp_36%3A1318504031&dc&qid=1779346229&rnid=1318502031&ref=sr_nr_p_36_1"]
+scraping=["https://www.amazon.in/s?rh=n%3A976392031%2Cp_36%3A1318504031&dc&qid=1779346229&rnid=1318502031&ref=sr_nr_p_36_1"]
 
 #creat a new excel or reuse existing exel sheet
 def storedata(*args):
@@ -42,7 +45,7 @@ def storedata(*args):
         wb=Workbook()
         ws=wb.active
         ws.title='Web scraped'
-        headers=['PAGE TITLE','PRODUCT LABEL','PRODUCT RATING','PRICE','MRP','DISCOUNT','DELIVERY','FAST DELIVERY','IMG URL','STOCK','SELLER','URL']
+        headers=['PAGE TITLE','PRODUCT LABEL','PRODUCT RATING','PRICE','MRP','DISCOUNT','DELIVERY','FAST DELIVERY','IMG URL','STOCK','SELLER','BRAND NAME','URL']
         ws.append(headers)
     else:
         wb=load_workbook(sheet_location)
@@ -50,7 +53,7 @@ def storedata(*args):
     ws.append(row)
     wb.save(sheet_location)
 
-    newrow=df([row], columns=['PAGE TITLE', 'PRODUCT LABEL', 'PRODUCT RATING','PRICE','MRP','DISCOUNT', 'DELIVERY', 'FAST DELIVERY', 'IMG URL', 'STOCK','SELLER','URL'])
+    newrow=df([row], columns=['PAGE TITLE', 'PRODUCT LABEL', 'PRODUCT RATING','PRICE','MRP','DISCOUNT', 'DELIVERY', 'FAST DELIVERY', 'IMG URL', 'STOCK','SELLER','BRAND NAME','URL'])
     #create new csv file if not have existing file or use existing file  
     if os.path.exists(csv_location):
         newrow.to_csv(csv_location, mode='a', header=False, index=False)
@@ -109,49 +112,66 @@ def safe_product_img_url(product, xpath):
     img_url = elems[0].get_attribute("src").strip()
     return img_url
 
-def product_avail(producturl, availability_xpath,sold_by_xpath):
+def product_avail(producturl, availability_xpath,sold_by_xpath,brand_xpath):
         
-        print("inside product_avail function..........................", producturl)
-        driver.execute_script("window.open('');",producturl)
-        driver.switch_to.window(driver.window_handles[1])
-        driver.set_page_load_timeout(120)
-        product_title=driver.title
-        print("product_tiitle is ........................",product_title)
-        
+        product_stock = "Not found"
+        seller = "Not found"
+        brand_name= "Not found"
+                
         try:
+            driver.execute_script("window.open(arguments[0],'_blank');",producturl)
+            driver.switch_to.window(driver.window_handles[1])
+            product_title=driver.title
+            print("product title is..........................", product_title)
+            
             #availability
             try:
-                product_avail=wait.until(Ec.presence_of_all_elements_located((By.XPATH, availability_xpath)))
-                print("product_avail ........................", product_avail)
-                product_stock=product_avail[0].get_attribute("textContent").strip()
-            except:
-                pass
+                products=wait.until(Ec.presence_of_all_elements_located((By.XPATH, availability_xpath)))
+                product_stock=products[0].get_attribute("textContent").strip()
+            except TimeoutException:
+                print("Timeout occurred while fetching product availability")
+                
             #seller
             try:
-                product_avail=wait.until(Ec.presence_of_all_elements_located((By.XPATH, sold_by_xpath)))
-                print("product_avail ........................", product_avail)
-                seller=product_avail[0].get_attribute("textContent").strip()
-            except:
-                pass
-        except TimeoutException:
-                print("Time out url is in product_avail ......",url)
-                driver.execute_script("window.stop();")
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
-        return product_stock, seller
-        
+                sellers=wait.until(Ec.presence_of_all_elements_located((By.XPATH, sold_by_xpath)))
+                seller=sellers[0].get_attribute("textContent").strip()
+            except TimeoutException:
+                print("Timeout occurred while fetching seller information")
+            
+            #brand name
+            brand_names=driver.find_elements(By.XPATH, brand_xpath)
+            print("brand_names lenght is ......................................", len(brand_names))
+            if brand_names:
+                brand_name=brand_names[0].get_attribute("textContent").strip()
+            else:
+                other_brand_names=driver.find_elements(By.XPATH, brand_header_xpath01)
+                print("other_brand_names lenght is ......................................", len(other_brand_names))
+                if other_brand_names:
+                    brand_name=other_brand_names[0].get_attribute("textContent").strip()
+                else:
+                    print("Brand name not found")
 
+        except TimeoutException:
+                print("Timeout occurred while loading product page")
+                driver.execute_script("window.stop();")    
+        finally:
+            driver.close()
+            driver.switch_to.window(driver.window_handles[0])
+        return product_stock, seller, brand_name
 
 #to get product label and discription
-def productsdescription(allproductsxpath,productlabelxpath,ratingxpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath):
+def products_description(allproducts_xpath,productlabel_xpath,rating_xpath,review_xpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath,brand_xpath):
     productdata=[]
     
-    allproducts=wait.until(Ec.presence_of_all_elements_located((By.XPATH, allproductsxpath)))
+    allproducts=wait.until(Ec.presence_of_all_elements_located((By.XPATH, allproducts_xpath)))
     print("Total number of products........",len(allproducts))
     
     for product in allproducts:
-        label=safe_productlabel(product, productlabelxpath)
-        rating=safe_productlabel(product, ratingxpath)
+        label=safe_productlabel(product, productlabel_xpath)
+        rating=safe_productlabel(product, rating_xpath)
+        review=safe_productlabel(product, review_xpath)
+        final_rating=f'{rating} {review}'
+
         price=safe_productlabel(product, price_xpath)
         mrp=safe_productlabel(product, mrp_xpath)
         discount=safe_productlabel(product, discount_xpath)
@@ -163,17 +183,19 @@ def productsdescription(allproductsxpath,productlabelxpath,ratingxpath,price_xpa
         print("elems is avail......................................", elems)
         if elems:
             product_url=elems[0].get_attribute("href")
-            product_stock,seller=product_avail(product_url,availability_xpath,sold_by_xpath) 
+            product_stock,seller,brand_name=product_avail(product_url,availability_xpath,sold_by_xpath,brand_xpath) 
         else:
             product_stock="Not found"
             seller="Not found"
-        
-        productdata.append((label, rating, price, mrp, discount, delevery, fastdelevery, product_img_url, product_stock, seller))
-        print("Label:", label, "| Rating:", rating, "| Price:", price, "| MRP:", mrp, "| Discount:", discount, "| Delivery:", delevery, "| Fast Delivery:", fastdelevery, "| Image URL:", product_img_url, "| Availability:", product_stock, "| Seller Name:", seller)
+            brand_name="Not found"
+
+        productdata.append((label, final_rating, price, mrp, discount, delevery, fastdelevery, product_img_url, product_stock, seller,brand_name))
+        print("Label:", label, "| final_rating:", final_rating, "| Price:", price, "| MRP:", mrp, "| Discount:", discount, "| Delivery:", delevery, "| Fast Delivery:", fastdelevery, "| Image URL:", product_img_url, "| Availability:", product_stock, "| Seller Name:", seller, "| Brand Name:", brand_name)
+        time.sleep(2)
     return productdata
 
 #store page title,url,
-def allpageurl(scraping,allproductsxpath,productlabelxpath,ratingxpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath):
+def store_details(scraping,allproducts_xpath,productlabel_xpath,rating_xpath,review_xpath, price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath,brand_xpath):
 
     for url in scraping:
         try:
@@ -183,14 +205,13 @@ def allpageurl(scraping,allproductsxpath,productlabelxpath,ratingxpath,price_xpa
             driver.maximize_window()
 
             pagetitle=driver.title
-            print("page url is..........................", url)
-            productsdes=productsdescription(allproductsxpath,productlabelxpath,ratingxpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath)
-            for label,rating,price,mrp,discount,delevery,fastdelevery,product_img_url,product_stock,seller in productsdes: 
-                storedata(pagetitle,label,rating,price,mrp,discount,delevery,fastdelevery,product_img_url,product_stock,seller ,url)
+            print("page url is..........................", url)  
+            productsdes=products_description(allproducts_xpath,productlabel_xpath,rating_xpath,review_xpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath,brand_xpath)
+            for label,final_rating,price,mrp,discount,delevery,fastdelevery,product_img_url,product_stock,seller,brand_name in productsdes: 
+                storedata(pagetitle,label,final_rating,price,mrp,discount,delevery,fastdelevery,product_img_url,product_stock,seller,brand_name,url)
         except TimeoutException:
 
             print("Time out url is ......",url)
             driver.execute_script("window.stop();")
-allpageurl(scraping,allproductsxpath,productlabelxpath,ratingxpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath)
-                                                                                   
-
+store_details(scraping,allproducts_xpath,productlabel_xpath, rating_xpath, review_xpath,price_xpath, mrp_xpath, discount_xpath,delevery_xpath, fastdelevery_xpath,product_img_url_xpath,product_description_xpath,availability_xpath,sold_by_xpath,brand_xpath)
+                                                                        
