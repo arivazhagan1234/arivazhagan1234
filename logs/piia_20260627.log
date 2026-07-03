@@ -1,0 +1,204 @@
+2026-06-27 11:59:09 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 11:59:09 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-27 11:59:09 [INFO    ] piia —   Início: 2026-06-27 11:59:09
+2026-06-27 11:59:09 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-27 11:59:09 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 11:59:09 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ config
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ database
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ data/raw
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ data/processed
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ data/cache
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ reports/excel
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ reports/pdf
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ screenshots
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ html_debug
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ logs
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ tests
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ backups
+2026-06-27 11:59:09 [INFO    ] piia —   ✔ src
+2026-06-27 11:59:09 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-27 11:59:09 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-27 11:59:09 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-27 11:59:10 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-27 14:02:28 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:02:28 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-27 14:02:28 [INFO    ] piia —   Início: 2026-06-27 14:02:28
+2026-06-27 14:02:28 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-27 14:02:28 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:02:28 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ config
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ database
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ data/raw
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ data/processed
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ data/cache
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ reports/excel
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ reports/pdf
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ screenshots
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ html_debug
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ logs
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ tests
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ backups
+2026-06-27 14:02:28 [INFO    ] piia —   ✔ src
+2026-06-27 14:02:28 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-27 14:02:28 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-27 14:02:28 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-27 14:02:28 [ERROR   ] piia — Bairro 'NOME' não encontrado na configuração.
+2026-06-27 14:02:28 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-06-27 14:02:28 [INFO    ] piia —   Coletados    : 0
+2026-06-27 14:02:28 [INFO    ] piia —   Novos        : 0
+2026-06-27 14:02:28 [INFO    ] piia —   Atualizados  : 0
+2026-06-27 14:02:28 [INFO    ] piia —   Preço alterado: 0
+2026-06-27 14:02:28 [INFO    ] piia —   Removidos    : 0
+2026-06-27 14:02:28 [INFO    ] piia —   Erros        : 0
+2026-06-27 14:02:28 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-06-27 14:02:28 [INFO    ] piia — ✅ Backup: piia_backup_20260627_140228.db
+2026-06-27 14:02:28 [INFO    ] piia — ▶ EXCEL — exportar relatório
+2026-06-27 14:02:29 [INFO    ] piia — ✅ Excel exportado: PIIA_Fase1_20260627_1402.xlsx
+2026-06-27 14:02:29 [INFO    ] piia —   Ficheiro: C:\Users\Admins\Desktop\sampleproject\reports\excel\PIIA_Fase1_20260627_1402.xlsx
+2026-06-27 14:02:29 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:02:29 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-06-27 14:02:30 [INFO    ] piia —   Total anúncios activos : 0
+2026-06-27 14:02:30 [INFO    ] piia —   → Compra               : 0
+2026-06-27 14:02:30 [INFO    ] piia —   → Arrendamento         : 0
+2026-06-27 14:02:30 [INFO    ] piia —   Bairros com dados      : 0
+2026-06-27 14:02:30 [INFO    ] piia —   Hist. alterações preço : 0
+2026-06-27 14:02:30 [INFO    ] piia —   Última extração        : None
+2026-06-27 14:02:30 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:02:30 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-06-27 14:04:17 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:04:17 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-27 14:04:17 [INFO    ] piia —   Início: 2026-06-27 14:04:17
+2026-06-27 14:04:17 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-27 14:04:17 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 14:04:17 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-27 14:04:17 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-27 14:04:18 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-27 14:16:30 [INFO    ] piia —     Pág 1: 50 anúncios extraídos (total acum.: 50)
+2026-06-27 14:27:07 [INFO    ] piia —     Pág 2: 50 anúncios extraídos (total acum.: 100)
+2026-06-27 14:39:17 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. | t1
+2026-06-27 14:39:54 [INFO    ] piia —     Pág 3: 50 anúncios extraídos (total acum.: 150)
+2026-06-27 14:51:11 [INFO    ] piia —     Pág 4: 50 anúncios extraídos (total acum.: 200)
+2026-06-27 14:58:41 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-06-27 15:02:03 [INFO    ] piia —     Pág 5: 50 anúncios extraídos (total acum.: 250)
+2026-06-27 15:05:20 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t4/luanda/ingombota/vender-apartamento-t4-duplex-na-marginal-/0194595/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x2cb205f2990>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-06-27 15:10:02 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. | t1
+2026-06-27 15:13:57 [INFO    ] piia —     Pág 6: 50 anúncios extraídos (total acum.: 300)
+2026-06-27 15:24:08 [INFO    ] piia —     Pág 7: 50 anúncios extraídos (total acum.: 350)
+2026-06-27 15:34:11 [INFO    ] piia —     Pág 8: 50 anúncios extraídos (total acum.: 400)
+2026-06-27 15:44:09 [INFO    ] piia —     Pág 9: 50 anúncios extraídos (total acum.: 450)
+2026-06-27 15:54:05 [INFO    ] piia —     Pág 10: 50 anúncios extraídos (total acum.: 500)
+2026-06-27 16:04:38 [INFO    ] piia —     Pág 11: 50 anúncios extraídos (total acum.: 550)
+2026-06-27 16:16:24 [INFO    ] piia —     Pág 12: 50 anúncios extraídos (total acum.: 600)
+2026-06-27 16:27:40 [INFO    ] piia —     Pág 13: 50 anúncios extraídos (total acum.: 650)
+2026-06-27 16:31:47 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:34:57 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:36:18 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:36:47 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:38:16 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:40:08 [INFO    ] piia —     Pág 14: 49 anúncios extraídos (total acum.: 699)
+2026-06-27 16:41:43 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-06-27 16:51:02 [INFO    ] piia —     Pág 15: 50 anúncios extraídos (total acum.: 749)
+2026-06-27 17:02:21 [INFO    ] piia —     Pág 16: 50 anúncios extraídos (total acum.: 799)
+2026-06-27 17:08:08 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. | t1
+2026-06-27 20:11:24 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-06-27 20:11:30 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/talatona/vender-vivenda-v4-duplex-no-condominio-talatona-boulevard/0192802/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:11:40 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/talatona/vender-vivenda-v4-duplex-no-condominio-talatona-boulevard/0192802/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:11:40 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v4/luanda/talatona/vender-vivenda-v4-duplex-no-condominio-talatona-boulevard/0192802/
+2026-06-27 20:11:46 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/benfica-inclui-lar-do-patriota-/vender-terreno-no-patriota/192799/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:11:51 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/benfica-inclui-lar-do-patriota-/vender-terreno-no-patriota/192799/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:51:48 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/benfica-inclui-lar-do-patriota-/vender-terreno-no-patriota/192799/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:51:48 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/terreno/luanda/benfica-inclui-lar-do-patriota-/vender-terreno-no-patriota/192799/
+2026-06-27 20:51:59 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:52:04 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:52:14 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:52:15 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/
+2026-06-27 20:52:21 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:52:26 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:52:36 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:52:36 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/
+2026-06-27 20:52:40 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:52:45 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:52:55 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:52:55 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/
+2026-06-27 20:53:01 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:53:06 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:53:17 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:53:17 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/
+2026-06-27 20:53:19 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:53:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:53:35 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:53:36 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/
+2026-06-27 20:53:41 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/vila-alice-nelito-soares-/vender-vivenda-v3-na-vila-alice/0192786/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:53:46 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/vila-alice-nelito-soares-/vender-vivenda-v3-na-vila-alice/0192786/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:53:56 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/vila-alice-nelito-soares-/vender-vivenda-v3-na-vila-alice/0192786/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:53:56 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v3/luanda/vila-alice-nelito-soares-/vender-vivenda-v3-na-vila-alice/0192786/
+2026-06-27 20:53:59 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:54:05 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:54:15 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:54:15 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/
+2026-06-27 20:54:20 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:54:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:54:35 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:54:35 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/
+2026-06-27 20:54:41 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:54:46 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:54:56 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:54:56 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/
+2026-06-27 20:55:00 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/talatona/vender-apartamento-t3-no-condominio-dolce-vita-talatona/0192775/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:55:05 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/talatona/vender-apartamento-t3-no-condominio-dolce-vita-talatona/0192775/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:55:15 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/talatona/vender-apartamento-t3-no-condominio-dolce-vita-talatona/0192775/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:55:15 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/apartamento/t3/luanda/talatona/vender-apartamento-t3-no-condominio-dolce-vita-talatona/0192775/
+2026-06-27 20:55:20 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v9/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v9-duplex-no-condominio-kuditemo-patriota/0192768/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:55:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v9/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v9-duplex-no-condominio-kuditemo-patriota/0192768/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:55:35 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v9/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v9-duplex-no-condominio-kuditemo-patriota/0192768/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:55:35 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v9/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v9-duplex-no-condominio-kuditemo-patriota/0192768/
+2026-06-27 20:55:47 [INFO    ] piia —     Pág 17: 37 anúncios extraídos (total acum.: 836)
+2026-06-27 20:55:51 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/venda/angola-luanda/mostrar-50/pagina-18/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:55:56 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/venda/angola-luanda/mostrar-50/pagina-18/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:56:06 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/venda/angola-luanda/mostrar-50/pagina-18/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:56:06 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/anuncios/venda/angola-luanda/mostrar-50/pagina-18/ordenar-normal/
+2026-06-27 20:56:06 [WARNING ] piia —     Sem resposta na pág 18 — parar coleta.
+2026-06-27 20:56:07 [INFO    ] piia —   ✔ Luanda geral/compra: 836 anúncios | completa=False
+2026-06-27 20:56:07 [INFO    ] piia —   ▶ Luanda geral | arrendamento
+2026-06-27 20:56:07 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/arrenda/angola-luanda/mostrar-50/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t1
+2026-06-27 20:56:12 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/arrenda/angola-luanda/mostrar-50/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t2
+2026-06-27 20:56:22 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /anuncios/arrenda/angola-luanda/mostrar-50/ordenar-normal/ (Caused by NameResolutionError("HTTPSConnection(host='www.angocasa.com', port=443): Failed to resolve 'www.angocasa.com' ([Errno 11001] getaddrinfo failed)")) | t3
+2026-06-27 20:56:22 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/anuncios/arrenda/angola-luanda/mostrar-50/ordenar-normal/
+2026-06-27 20:56:22 [WARNING ] piia —     Sem resposta na pág 1 — parar coleta.
+2026-06-27 20:56:22 [INFO    ] piia —   ✔ Luanda geral/arrendamento: 0 anúncios | completa=False
+2026-06-27 20:56:22 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-06-27 20:56:22 [INFO    ] piia —   Coletados    : 836
+2026-06-27 20:56:22 [INFO    ] piia —   Novos        : 836
+2026-06-27 20:56:22 [INFO    ] piia —   Atualizados  : 0
+2026-06-27 20:56:22 [INFO    ] piia —   Preço alterado: 0
+2026-06-27 20:56:22 [INFO    ] piia —   Removidos    : 0
+2026-06-27 20:56:22 [INFO    ] piia —   Erros        : 0
+2026-06-27 20:56:22 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-06-27 20:56:25 [INFO    ] piia — ✅ Backup: piia_backup_20260627_205622.db
+2026-06-27 20:56:25 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 20:56:25 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-06-27 20:56:25 [INFO    ] piia —   Total anúncios activos : 836
+2026-06-27 20:56:25 [INFO    ] piia —   → Compra               : 836
+2026-06-27 20:56:25 [INFO    ] piia —   → Arrendamento         : 0
+2026-06-27 20:56:25 [INFO    ] piia —   Bairros com dados      : 32
+2026-06-27 20:56:25 [INFO    ] piia —   Hist. alterações preço : 0
+2026-06-27 20:56:25 [INFO    ] piia —   Última extração        : 2026-06-27T20:55:47.383897
+2026-06-27 20:56:25 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-27 20:56:25 [INFO    ] piia — ✅ PIIA Fase 1 concluída.

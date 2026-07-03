@@ -1,0 +1,234 @@
+2026-06-26 15:35:05 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 15:35:05 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 15:35:05 [INFO    ] piia —   Início: 2026-06-26 15:35:05
+2026-06-26 15:35:05 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 15:35:05 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 15:35:05 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ config
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ database
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ data/raw
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ data/processed
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ data/cache
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ screenshots
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ html_debug
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ logs
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ tests
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ backups
+2026-06-26 15:35:05 [INFO    ] piia —   ✔ src
+2026-06-26 15:35:05 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 15:35:08 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.fonte
+2026-06-26 15:35:08 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.id_fonte
+2026-06-26 15:35:08 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.anunciante
+2026-06-26 15:35:09 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.telefone_whatsapp
+2026-06-26 15:35:09 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.url_imagem
+2026-06-26 15:35:09 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.segmento_imobiliario
+2026-06-26 15:35:09 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.email_agente
+2026-06-26 15:35:09 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.id_zenki
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.imovel_corporativo
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.preco_disponivel
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.url_brochura
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.pdf_brochura
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.hash_dedupe
+2026-06-26 15:35:10 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.headline_completa
+2026-06-26 15:35:11 [INFO    ] piia —   Migração SQLite: coluna adicionada anuncios.raw_json
+2026-06-26 15:35:11 [INFO    ] piia —   Migração SQLite: coluna adicionada erros_scraping.fonte
+2026-06-26 15:35:11 [INFO    ] piia —   Migração SQLite: coluna adicionada erros_scraping.pagina
+2026-06-26 15:35:11 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 15:35:11 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 15:35:12 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 15:46:31 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 15:46:31 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 15:46:31 [INFO    ] piia —   Início: 2026-06-26 15:46:31
+2026-06-26 15:46:31 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 15:46:31 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 15:46:31 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ config
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ database
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ data/raw
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ data/processed
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ data/cache
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 15:46:31 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ screenshots
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ html_debug
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ logs
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ tests
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ backups
+2026-06-26 15:46:32 [INFO    ] piia —   ✔ src
+2026-06-26 15:46:32 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 15:46:32 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 15:46:32 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 15:46:33 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 16:19:22 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 16:19:22 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 16:19:22 [INFO    ] piia —   Início: 2026-06-26 16:19:22
+2026-06-26 16:19:22 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 16:19:22 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 16:19:22 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ config
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ database
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ data/raw
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ data/processed
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ data/cache
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ screenshots
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ html_debug
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ logs
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ tests
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ backups
+2026-06-26 16:19:22 [INFO    ] piia —   ✔ src
+2026-06-26 16:19:22 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 16:19:23 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 16:19:23 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 16:19:23 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 16:23:03 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 16:23:03 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 16:23:03 [INFO    ] piia —   Início: 2026-06-26 16:23:03
+2026-06-26 16:23:03 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 16:23:03 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 16:23:03 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ config
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ database
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ data/raw
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ data/processed
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ data/cache
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ screenshots
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ html_debug
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ logs
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ tests
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ backups
+2026-06-26 16:23:03 [INFO    ] piia —   ✔ src
+2026-06-26 16:23:03 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 16:23:03 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 16:23:03 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 16:23:04 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 17:35:56 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 17:35:56 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 17:35:56 [INFO    ] piia —   Início: 2026-06-26 17:35:56
+2026-06-26 17:35:56 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 17:35:56 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 17:35:56 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ config
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ database
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ data/raw
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ data/processed
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ data/cache
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ screenshots
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ html_debug
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ logs
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ tests
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ backups
+2026-06-26 17:35:56 [INFO    ] piia —   ✔ src
+2026-06-26 17:35:56 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 17:35:56 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 17:35:56 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 17:35:57 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 18:33:10 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 18:33:10 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 18:33:10 [INFO    ] piia —   Início: 2026-06-26 18:33:10
+2026-06-26 18:33:10 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 18:33:10 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 18:33:10 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ config
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ database
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ data/raw
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ data/processed
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ data/cache
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ screenshots
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ html_debug
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ logs
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ tests
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ backups
+2026-06-26 18:33:10 [INFO    ] piia —   ✔ src
+2026-06-26 18:33:10 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 18:33:11 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 18:33:11 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 18:33:11 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-06-26 18:33:37 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 18:33:37 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-06-26 18:33:37 [INFO    ] piia —   Início: 2026-06-26 18:33:37
+2026-06-26 18:33:37 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-06-26 18:33:37 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-06-26 18:33:37 [INFO    ] piia — ▶ SETUP — criar estrutura de pastas
+2026-06-26 18:33:37 [INFO    ] piia —   ✔ config
+2026-06-26 18:33:37 [INFO    ] piia —   ✔ database
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ data/raw
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ data/processed
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ data/cache
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ reports/excel
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ reports/pdf
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ reports/dashboards
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ market_reports/PDFs Mercado
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ market_reports/Noticias
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ market_reports/Processados
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ project_sources/Infraestruturas
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ project_sources/Projetos Publicos
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ project_sources/Projetos Privados
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ project_sources/Noticias
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ screenshots
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ html_debug
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ logs
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ tests
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ backups
+2026-06-26 18:33:38 [INFO    ] piia —   ✔ src
+2026-06-26 18:33:38 [INFO    ] piia — ✅ Estrutura criada.
+2026-06-26 18:33:38 [INFO    ] piia — ✅ Base de dados OK.
+2026-06-26 18:33:38 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-06-26 18:33:38 [INFO    ] piia —   ▶ Luanda geral | compra

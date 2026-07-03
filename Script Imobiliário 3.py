@@ -216,7 +216,7 @@ def criar_estrutura():
         "screenshots","html_debug","logs","tests","backups","src",
     ]
     for p in pastas:
-        full = PROJECT_ROOT / p
+        full = PROJECT_ROOT / hp
         full.mkdir(parents=True, exist_ok=True)
         log.info(f"  ✔ {p}")
     env_ex = PROJECT_ROOT / ".env.example"
@@ -587,13 +587,15 @@ class DB:
 def norm_num(txt):
     if not txt: return None
     s = re.sub(r"[^\d,.]","",str(txt).strip())
-    if not s: return None
+    if not re.search(r"\d",s): return None
     if "," in s and "." in s:
         s=s.replace(".","").replace(",",".")
     elif "," in s and s.index(",") < len(s)-4:
         s=s.replace(",","")
     elif "," in s:
         s=s.replace(",",".")
+    elif "." in s and "." in s:
+        s=s.replace(".","")
     try: return float(s)
     except: return None
 
@@ -1074,8 +1076,8 @@ class ScraperRemax:
         return limpar_texto(" ".join(partes), limite=limite)
 
     def _url_partes_remax(self, url: str) -> dict:
-        """Extrai partes semânticas da URL /pt-ao/angariacoes/tipo/negocio/bairro/.../id."""
-        parts = [p for p in urlparse(url).path.strip("/").split("/") if p]
+        """Extrai partes semântpicas da URL /pt-ao/angariacoes/tipo/negocio/bairro/.../id."""
+        parts = [p for p in urlarse(url).path.strip("/").split("/") if p]
         out = {"tipo_slug": "", "negocio_slug": "", "bairro_slug": "", "slug_titulo": "", "mls_slug": ""}
         try:
             idx = parts.index("angariacoes")
@@ -4096,7 +4098,7 @@ class Scraper:
             "n_novos": 0,
             "n_atualizados": 0,
             "n_preco_alt": 0,
-            "n_coletados": 0,
+            "n_coletados": 0,     
             "n_removidos": 0,
             "n_erros": 0,
         }
@@ -4245,7 +4247,7 @@ def _aplicar_formatacao_padrao(ws):
         "yield_liquido", "payback_bruto", "payback_liquido", "cambio",
         "taxa câmbio akz/usd"
     }
-    campos_quantidade = {
+    ampos_quantidade = {
         "id", "anuncio_id", "id_angocasa", "area_m2", "area_util_m2",
         "area_bruta_m2", "area_lote_m2", "quartos", "wc", "mobilado",
         "garagem", "piscina", "gerador", "reservatorio", "seguranca",
@@ -4258,7 +4260,7 @@ def _aplicar_formatacao_padrao(ws):
                     "email_agente", "segmento_imobiliario", "hash_dedupe", "id_zenki", "url_brochura", "pdf_brochura"}
 
     headers = {}
-    for col in range(1, ws.max_column + 1):
+    fcor col in range(1, ws.max_column + 1):
         valor = ws.cell(1, col).value
         headers[col] = str(valor).strip().lower() if valor is not None else ""
 
