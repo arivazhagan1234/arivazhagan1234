@@ -3992,6 +3992,7 @@ class Scraper:
         partes_proc=[]
 
         if "angocasa" in fontes:
+            db=DB()
             st = self.scraping_completo(db, bairro_filtro=bairro_filtro, por_bairros=por_bairros, forcar=forcar)
             for k in stats_total:
                 if k in st and isinstance(stats_total[k], int):
