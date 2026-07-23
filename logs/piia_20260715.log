@@ -1,0 +1,42 @@
+2026-07-15 15:57:39 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 15:57:39 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-15 15:57:39 [INFO    ] piia —   Início: 2026-07-15 15:57:39
+2026-07-15 15:57:39 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-15 15:57:39 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 15:57:40 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-15 15:57:40 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-15 15:57:40 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-15 15:57:40 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-07-15 15:57:40 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-07-15 15:57:40 [WARNING ] piia —     [RE/MAX] API sem URLs — tentando fallback HTML da primeira página
+2026-07-15 15:57:44 [ERROR   ] piia — Erro coleta remax: 'NoneType' object is not iterable
+2026-07-15 15:57:44 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-15 15:57:44 [INFO    ] piia —   Coletados    : 0
+2026-07-15 15:57:44 [INFO    ] piia —   Novos        : 0
+2026-07-15 15:57:44 [INFO    ] piia —   Atualizados  : 0
+2026-07-15 15:57:44 [INFO    ] piia —   Preço alterado: 0
+2026-07-15 15:57:44 [INFO    ] piia —   Removidos    : 0
+2026-07-15 15:57:44 [INFO    ] piia —   Erros        : 1
+2026-07-15 15:57:44 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-15 15:57:45 [INFO    ] piia — ✅ Backup: piia_backup_20260715_155744.db
+2026-07-15 15:57:46 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 15:57:46 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-15 15:57:46 [INFO    ] piia —   Total anúncios activos : 6332
+2026-07-15 15:57:46 [INFO    ] piia —   → Compra               : 5433
+2026-07-15 15:57:46 [INFO    ] piia —   → Arrendamento         : 899
+2026-07-15 15:57:46 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-15 15:57:46 [INFO    ] piia —   Hist. alterações preço : 1
+2026-07-15 15:57:46 [INFO    ] piia —   Última extração        : 2026-07-14T18:15:10.295099
+2026-07-15 15:57:46 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 15:57:46 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-15 16:13:48 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 16:13:48 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-15 16:13:48 [INFO    ] piia —   Início: 2026-07-15 16:13:48
+2026-07-15 16:13:48 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-15 16:13:48 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-15 16:13:49 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-15 16:13:49 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-15 16:13:49 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-15 16:13:49 [INFO    ] piia —   ▶ AngoImóveis | compra
+2026-07-15 16:14:00 [INFO    ] piia —     [AngoImóveis] compra — 23 páginas detectadas
+2026-07-15 16:17:29 [WARNING ] piia — Scraping interrompido pelo utilizador.

@@ -1,0 +1,107 @@
+2026-07-03 20:19:41 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 20:19:41 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-03 20:19:41 [INFO    ] piia —   Início: 2026-07-03 20:19:41
+2026-07-03 20:19:41 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-03 20:19:41 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 20:19:41 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-03 20:19:41 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-03 20:19:41 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-03 20:19:41 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 18
+2026-07-03 20:19:41 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-07-03 20:20:14 [INFO    ] piia —     Pág 18: 2 anúncios extraídos (total acum.: 2)
+2026-07-03 20:20:36 [INFO    ] piia —     Pág 19: 0 anúncios extraídos (total acum.: 2)
+2026-07-03 20:20:52 [INFO    ] piia —     Pág 20: 0 anúncios extraídos (total acum.: 2)
+2026-07-03 20:21:38 [INFO    ] piia —     Pág 21: 3 anúncios extraídos (total acum.: 5)
+2026-07-03 20:23:02 [INFO    ] piia —     Pág 22: 5 anúncios extraídos (total acum.: 10)
+2026-07-03 20:24:14 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-03 20:24:40 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79338410>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:25:11 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79338690>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:25:11 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v4/luanda/camama/vender-vivenda-v4-com-piscina-e-anexo-no-condominio-veredas-das-flores-camama/0192796/
+2026-07-03 20:25:39 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79338910>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:26:05 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79338b90>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:26:36 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79338e10>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:26:36 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v3/luanda/ingombota/vender-vivenda-v3-no-miramar/0192795/
+2026-07-03 20:27:00 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339090>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:27:26 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339310>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:27:57 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339590>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:27:57 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v3/luanda/talatona/vender-vivenda-v3-2-no-condominio-cajueiro-talatona/0192792/
+2026-07-03 20:28:23 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339810>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:28:49 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339a90>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:29:20 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339d10>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:29:20 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v4/luanda/nova-vida-golfe/vender-vivenda-v4-1-no-nova-vida/0192788/
+2026-07-03 20:29:44 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a79339f90>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:30:10 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933a210>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:30:41 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933a490>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:30:41 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/apartamento/t3/luanda/morro-bento/vender-apartamento-t3-no-condominio-interland-morro-bento/0192789/
+2026-07-03 20:31:07 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933a710>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:31:33 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933a990>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:32:04 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933ac10>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:32:04 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/apartamento/t3/luanda/kinaxixi/vender-apartamento-t3-no-edificio-ministerio-dos-recursos-minerais-kinaxixi/0192784/
+2026-07-03 20:32:28 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933ae90>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:32:54 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933b110>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:33:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933b390>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:33:25 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/terreno/luanda/viana/vender-terreno-de-3-4-hectares-em-viana/0192779/
+2026-07-03 20:33:52 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933b610>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 20:34:18 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933b890>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 20:34:49 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a7933bb10>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t3
+2026-07-03 20:34:49 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/vivenda/v6/luanda/benfica-inclui-lar-do-patriota-/vender-vivenda-v6-duplex-no-condominio-vila-kuditemo-lar-do-patriota/0192778/
+2026-07-03 20:42:01 [INFO    ] piia —     Pág 23: 36 anúncios extraídos (total acum.: 46)
+2026-07-03 20:42:23 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-03 20:52:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-03 20:53:47 [INFO    ] piia —     Pág 24: 50 anúncios extraídos (total acum.: 96)
+2026-07-03 20:54:59 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. | t1
+2026-07-03 20:55:54 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-03 20:58:53 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-03 21:06:42 [INFO    ] piia —     Pág 25: 50 anúncios extraídos (total acum.: 146)
+2026-07-03 21:11:54 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 21:13:52 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 21:17:54 [INFO    ] piia —     Pág 26: 50 anúncios extraídos (total acum.: 196)
+2026-07-03 21:26:11 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 21:27:04 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 21:29:54 [INFO    ] piia —     Pág 27: 50 anúncios extraídos (total acum.: 246)
+2026-07-03 21:39:13 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-03 21:40:42 [INFO    ] piia —     Pág 28: 50 anúncios extraídos (total acum.: 296)
+2026-07-03 21:42:49 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-03 21:43:12 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 21:50:41 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /vivenda/v8/luanda/mussulo/vender-vivenda-v8-duplex-mobiliada-no-mussulo/0191501/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a76d4c690>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t1
+2026-07-03 21:53:29 [INFO    ] piia —     Pág 29: 50 anúncios extraídos (total acum.: 346)
+2026-07-03 21:54:21 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-03 22:04:14 [INFO    ] piia —     Pág 30: 48 anúncios extraídos (total acum.: 394)
+2026-07-03 22:11:34 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-03 22:14:52 [INFO    ] piia —     Pág 31: 50 anúncios extraídos (total acum.: 444)
+2026-07-03 22:26:05 [INFO    ] piia —     Pág 32: 50 anúncios extraídos (total acum.: 494)
+2026-07-03 22:32:10 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-03 22:32:36 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Max retries exceeded with url: /apartamento/t2/luanda/cruzeiro/vender-apartamento-t2-no-edificio-anangola-cruzeiro-/0190750/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.angocasa.com', port=443) at 0x22a76d4efd0>, 'Connection to www.angocasa.com timed out. (connect timeout=30)')) | t2
+2026-07-03 22:37:56 [INFO    ] piia —     Pág 33: 50 anúncios extraídos (total acum.: 544)
+2026-07-03 22:40:41 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-03 22:40:48 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:40:48 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-03 22:40:48 [INFO    ] piia —   Total anúncios activos : 1380
+2026-07-03 22:40:48 [INFO    ] piia —   → Compra               : 1380
+2026-07-03 22:40:48 [INFO    ] piia —   → Arrendamento         : 0
+2026-07-03 22:40:48 [INFO    ] piia —   Bairros com dados      : 34
+2026-07-03 22:40:48 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-03 22:40:48 [INFO    ] piia —   Última extração        : 2026-07-03T22:37:56.449229
+2026-07-03 22:40:48 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:40:48 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-03 22:42:08 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:42:08 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-03 22:42:08 [INFO    ] piia —   Início: 2026-07-03 22:42:08
+2026-07-03 22:42:08 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-03 22:42:08 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:42:08 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-03 22:42:08 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-03 22:42:09 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-03 22:42:09 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 34
+2026-07-03 22:42:09 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-07-03 22:49:31 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-03 22:49:31 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:49:31 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-03 22:49:31 [INFO    ] piia —   Total anúncios activos : 1380
+2026-07-03 22:49:31 [INFO    ] piia —   → Compra               : 1380
+2026-07-03 22:49:31 [INFO    ] piia —   → Arrendamento         : 0
+2026-07-03 22:49:31 [INFO    ] piia —   Bairros com dados      : 34
+2026-07-03 22:49:31 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-03 22:49:31 [INFO    ] piia —   Última extração        : 2026-07-03T22:37:56.449229
+2026-07-03 22:49:31 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-03 22:49:31 [INFO    ] piia — ✅ PIIA Fase 1 concluída.

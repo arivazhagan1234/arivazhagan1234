@@ -1,0 +1,188 @@
+2026-07-14 13:51:51 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 13:51:51 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 13:51:51 [INFO    ] piia —   Início: 2026-07-14 13:51:51
+2026-07-14 13:51:51 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 13:51:51 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 13:51:52 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 13:51:52 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 13:51:52 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 13:51:52 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-07-14 13:51:52 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-07-14 13:52:13 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-07-14 13:52:15 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-07-14 13:52:15 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-07-14 13:54:13 [INFO    ] piia —     RE/MAX pág 1/12: 0 extraídos (acum.: 0)
+2026-07-14 13:56:17 [INFO    ] piia —     RE/MAX pág 2/12: 0 extraídos (acum.: 0)
+2026-07-14 13:58:19 [INFO    ] piia —     RE/MAX pág 3/12: 0 extraídos (acum.: 0)
+2026-07-14 14:00:22 [INFO    ] piia —     RE/MAX pág 4/12: 0 extraídos (acum.: 0)
+2026-07-14 14:02:21 [INFO    ] piia —     RE/MAX pág 5/12: 0 extraídos (acum.: 0)
+2026-07-14 14:04:27 [INFO    ] piia —     RE/MAX pág 6/12: 0 extraídos (acum.: 0)
+2026-07-14 14:06:14 [INFO    ] piia —     RE/MAX pág 7/12: 0 extraídos (acum.: 0)
+2026-07-14 14:08:01 [INFO    ] piia —     RE/MAX pág 8/12: 0 extraídos (acum.: 0)
+2026-07-14 14:09:50 [INFO    ] piia —     RE/MAX pág 9/12: 0 extraídos (acum.: 0)
+2026-07-14 14:11:37 [INFO    ] piia —     RE/MAX pág 10/12: 0 extraídos (acum.: 0)
+2026-07-14 14:13:26 [INFO    ] piia —     RE/MAX pág 11/12: 0 extraídos (acum.: 0)
+2026-07-14 14:14:13 [INFO    ] piia —     RE/MAX pág 12/12: 0 extraídos (acum.: 0)
+2026-07-14 14:14:13 [INFO    ] piia —   ✔ RE/MAX Angola: 0 anúncios total
+2026-07-14 14:14:13 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:14:13 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-14 14:14:13 [INFO    ] piia —   Coletados    : 0
+2026-07-14 14:14:13 [INFO    ] piia —   Novos        : 0
+2026-07-14 14:14:13 [INFO    ] piia —   Atualizados  : 0
+2026-07-14 14:14:13 [INFO    ] piia —   Preço alterado: 0
+2026-07-14 14:14:13 [INFO    ] piia —   Removidos    : 0
+2026-07-14 14:14:13 [INFO    ] piia —   Erros        : 0
+2026-07-14 14:14:13 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-14 14:14:14 [INFO    ] piia — ✅ Backup: piia_backup_20260714_141414.db
+2026-07-14 14:14:14 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:14:14 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-14 14:14:14 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-14 14:14:14 [INFO    ] piia —   → Compra               : 5433
+2026-07-14 14:14:14 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-14 14:14:14 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-14 14:14:14 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-14 14:14:14 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-14 14:14:15 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:14:15 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-14 14:27:34 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:27:34 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 14:27:34 [INFO    ] piia —   Início: 2026-07-14 14:27:34
+2026-07-14 14:27:34 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 14:27:34 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:27:34 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:27:34 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 14:27:34 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:27:34 [INFO    ] piia —   ▶ MIA | compra
+2026-07-14 14:27:38 [INFO    ] piia —     [MIA] compra — 42 anúncios (4 páginas de 12)
+2026-07-14 14:28:42 [INFO    ] piia —     MIA pág 1/4: 12 extraídos (acum.: 12)
+2026-07-14 14:29:49 [INFO    ] piia —     MIA pág 2/4: 12 extraídos (acum.: 24)
+2026-07-14 14:30:47 [INFO    ] piia —     MIA pág 3/4: 12 extraídos (acum.: 36)
+2026-07-14 14:31:23 [INFO    ] piia —     MIA pág 4/4: 6 extraídos (acum.: 42)
+2026-07-14 14:31:23 [INFO    ] piia —   ▶ MIA | arrendamento
+2026-07-14 14:31:23 [INFO    ] piia —     [MIA] arrendamento — 22 anúncios (2 páginas de 12)
+2026-07-14 14:32:16 [INFO    ] piia —     MIA pág 1/2: 12 extraídos (acum.: 12)
+2026-07-14 14:33:13 [INFO    ] piia —     MIA pág 2/2: 10 extraídos (acum.: 22)
+2026-07-14 14:33:13 [INFO    ] piia —   ✔ MIA: 64 anúncios total
+2026-07-14 14:33:13 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:33:14 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-14 14:33:14 [INFO    ] piia —   Coletados    : 64
+2026-07-14 14:33:14 [INFO    ] piia —   Novos        : 0
+2026-07-14 14:33:14 [INFO    ] piia —   Atualizados  : 0
+2026-07-14 14:33:14 [INFO    ] piia —   Preço alterado: 0
+2026-07-14 14:33:14 [INFO    ] piia —   Removidos    : 0
+2026-07-14 14:33:14 [INFO    ] piia —   Erros        : 0
+2026-07-14 14:33:14 [INFO    ] piia — ──────────────────────────────────────────────────
+2026-07-14 14:33:15 [INFO    ] piia — ✅ Backup: piia_backup_20260714_143315.db
+2026-07-14 14:33:15 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:33:15 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-14 14:33:15 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-14 14:33:15 [INFO    ] piia —   → Compra               : 5433
+2026-07-14 14:33:15 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-14 14:33:15 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-14 14:33:15 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-14 14:33:15 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-14 14:33:15 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:33:15 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-14 14:41:15 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:41:15 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 14:41:15 [INFO    ] piia —   Início: 2026-07-14 14:41:15
+2026-07-14 14:41:15 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 14:41:15 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:41:16 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:41:16 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 14:41:16 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:41:16 [INFO    ] piia —   ▶ MIA | compra
+2026-07-14 14:41:19 [INFO    ] piia —     [MIA] compra — 42 anúncios (4 páginas de 12)
+2026-07-14 14:42:20 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-14 14:42:20 [INFO    ] piia —     MIA pág 1/4: 12 extraídos (acum.: 12)
+2026-07-14 14:42:20 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:42:20 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-14 14:42:20 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-14 14:42:20 [INFO    ] piia —   → Compra               : 5433
+2026-07-14 14:42:20 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-14 14:42:20 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-14 14:42:20 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-14 14:42:20 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-14 14:42:20 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:42:20 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-14 14:48:54 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:48:54 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 14:48:54 [INFO    ] piia —   Início: 2026-07-14 14:48:54
+2026-07-14 14:48:54 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 14:48:54 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:48:54 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:48:54 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 14:48:55 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 14:48:55 [INFO    ] piia —     [MIA] Retomando do checkpoint: pág 2
+2026-07-14 14:48:55 [INFO    ] piia —   ▶ MIA | compra
+2026-07-14 14:49:51 [INFO    ] piia —     MIA pág 2/2: 12 extraídos (acum.: 12)
+2026-07-14 14:49:51 [INFO    ] piia —   ▶ MIA | arrendamento
+2026-07-14 14:49:52 [INFO    ] piia —     [MIA] arrendamento — 22 anúncios (2 páginas de 12)
+2026-07-14 14:50:06 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-14 14:50:07 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:50:07 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-14 14:50:07 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-14 14:50:07 [INFO    ] piia —   → Compra               : 5433
+2026-07-14 14:50:07 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-14 14:50:07 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-14 14:50:07 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-14 14:50:07 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-14 14:50:07 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 14:50:07 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-14 14:50:48 [INFO    ] piia —     MIA pág 1/2: 12 extraídos (acum.: 12)
+2026-07-14 14:51:44 [INFO    ] piia —     MIA pág 2/2: 10 extraídos (acum.: 22)
+2026-07-14 14:51:45 [INFO    ] piia —   ✔ MIA: 34 anúncios total
+2026-07-14 16:09:21 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:09:22 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 16:09:22 [INFO    ] piia —   Início: 2026-07-14 16:09:22
+2026-07-14 16:09:22 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 16:09:22 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:09:23 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 16:09:23 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 16:09:24 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 16:09:24 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 99
+2026-07-14 16:09:24 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-07-14 16:09:24 [INFO    ] piia —   ✔ Luanda geral/compra: 0 anúncios | completa=False
+2026-07-14 16:09:24 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 9
+2026-07-14 16:09:24 [INFO    ] piia —   ▶ Luanda geral | arrendamento
+2026-07-14 16:20:13 [INFO    ] piia —     Pág 9: 50 anúncios extraídos (total acum.: 50)
+2026-07-14 16:20:35 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-14 16:20:36 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:20:36 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-14 16:20:36 [INFO    ] piia —   Total anúncios activos : 6024
+2026-07-14 16:20:36 [INFO    ] piia —   → Compra               : 5433
+2026-07-14 16:20:36 [INFO    ] piia —   → Arrendamento         : 591
+2026-07-14 16:20:36 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-14 16:20:36 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-14 16:20:36 [INFO    ] piia —   Última extração        : 2026-07-14T16:20:13.128064
+2026-07-14 16:20:36 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:20:36 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-14 16:21:06 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:21:06 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-14 16:21:06 [INFO    ] piia —   Início: 2026-07-14 16:21:06
+2026-07-14 16:21:06 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-14 16:21:06 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-14 16:21:06 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 16:21:06 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-14 16:21:06 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-14 16:21:06 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 99
+2026-07-14 16:21:06 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-07-14 16:21:06 [INFO    ] piia —   ✔ Luanda geral/compra: 0 anúncios | completa=False
+2026-07-14 16:21:06 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 10
+2026-07-14 16:21:06 [INFO    ] piia —   ▶ Luanda geral | arrendamento
+2026-07-14 16:21:21 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-14 16:31:13 [INFO    ] piia —     Pág 10: 50 anúncios extraídos (total acum.: 50)
+2026-07-14 16:41:09 [INFO    ] piia —     Pág 11: 48 anúncios extraídos (total acum.: 98)
+2026-07-14 16:48:08 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1
+2026-07-14 16:50:53 [INFO    ] piia —     Pág 12: 47 anúncios extraídos (total acum.: 145)
+2026-07-14 17:01:24 [INFO    ] piia —     Pág 13: 49 anúncios extraídos (total acum.: 194)
+2026-07-14 17:12:04 [INFO    ] piia —     Pág 14: 50 anúncios extraídos (total acum.: 244)
+2026-07-14 17:23:35 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-14 17:25:30 [INFO    ] piia —     Pág 15: 50 anúncios extraídos (total acum.: 294)
+2026-07-14 17:38:35 [INFO    ] piia —     Pág 16: 50 anúncios extraídos (total acum.: 344)
+2026-07-14 17:51:09 [INFO    ] piia —     Pág 17: 50 anúncios extraídos (total acum.: 394)
+2026-07-14 17:56:07 [WARNING ] piia — Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | t1
+2026-07-14 17:58:33 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-07-14 18:03:58 [INFO    ] piia —     Pág 18: 50 anúncios extraídos (total acum.: 444)
+2026-07-14 18:15:10 [INFO    ] piia —     Pág 19: 50 anúncios extraídos (total acum.: 494)
+2026-07-14 18:15:33 [WARNING ] piia — Rede ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | t1

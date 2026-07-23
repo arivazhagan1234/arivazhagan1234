@@ -28,6 +28,12 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from logging.handlers import RotatingFileHandler
 from urllib.parse import urljoin, urlparse, urlunparse, urlencode, parse_qsl
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+import threading
+
+
+
+
 
 import requests
 from bs4 import BeautifulSoup
@@ -64,7 +70,7 @@ CFG: Dict = {
     "backups_dir":  PROJECT_ROOT / "backups",
     "base_url":     "https://www.angocasa.com",
     "items_pag":    50,
-    "max_paginas":  200,
+    "max_paginas":  95,
     "delay_min":    2.5,
     "delay_max":    6.0,
     "max_retries":  3,
@@ -216,7 +222,7 @@ def criar_estrutura():
         "screenshots","html_debug","logs","tests","backups","src",
     ]
     for p in pastas:
-        full = PROJECT_ROOT / hp
+        full = PROJECT_ROOT / p        
         full.mkdir(parents=True, exist_ok=True)
         log.info(f"  ✔ {p}")
     env_ex = PROJECT_ROOT / ".env.example"
@@ -913,11 +919,11 @@ def enriquecer_campos_padrao(d: dict) -> dict:
     d["hash_dedupe"] = d.get("hash_dedupe") or gerar_hash_dedupe(d)
     return d
 
-
 # ─────────────────────────────────────────────────────────────────
 # SCRAPER DEDICADO — RE/MAX ANGOLA
 # ─────────────────────────────────────────────────────────────────
 class ScraperRemax:
+
     """
     Coletor dedicado para RE/MAX Angola / Multitrust.
 
@@ -1265,7 +1271,7 @@ class ScraperRemax:
             {**base, "filter": f"content/TransactionTypeUID eq {int(transaction_uid)}"},
             {**base, "filter": (
                 f"content/TransactionTypeUID eq {int(transaction_uid)}"
-                " and content/CountryCode eq 'AO'"
+                " and content/ListingCountryCode eq 'AO'"
             )},
         ]
 
@@ -1273,6 +1279,7 @@ class ScraperRemax:
         for tentativa in range(1, CFG["max_retries"] + 1):
             try:
                 r = self.ses.post(self.API_SEARCH, json=payload, timeout=CFG["timeout"])
+                print("Reponse................",r)                
                 if r.status_code >= 400:
                     corpo = limpar_texto(r.text, limite=800)
                     log.warning(f"[RE/MAX] HTTP {r.status_code} | tentativa {tentativa} | body: {corpo}")
@@ -1286,6 +1293,7 @@ class ScraperRemax:
                         time.sleep(2 * tentativa)
                     continue
                 data = r.json()
+                #print(" the response is ..", data)
                 if CFG.get("salvar_html") or pagina == 1:
                     self._salvar_debug_json(data, pagina, negocio)
                 return data
@@ -1653,6 +1661,7 @@ class ScraperRemax:
                 self._delay()
 
         log.info(f"  ✔ RE/MAX Angola: {len(resultados)} anúncios total")
+        print("resultados is ................", resultados)
         return resultados, True
 
 
@@ -2127,6 +2136,7 @@ class ScraperAngoImoveis:
         time.sleep(random.uniform(CFG["delay_min"], CFG["delay_max"]))
 
     def _get(self, url: str) -> Optional[BeautifulSoup]:
+        print("url is >.................",url)
         for tentativa in range(1, CFG["max_retries"] + 1):
             try:
                 r = self.ses.get(url, timeout=CFG["timeout"])
@@ -2187,6 +2197,7 @@ class ScraperAngoImoveis:
 
     def extrair_detalhe(self, url: str, negocio_fallback: str) -> Optional[dict]:
         soup = self._get(url)
+        print("the soup is .........", soup)
         if not soup:
             return None
         self._delay()
@@ -2197,6 +2208,7 @@ class ScraperAngoImoveis:
 
         # Título / headline.
         h1 = soup.select_one("h1")
+        print(" The h1 tage is ...................",h1)
         og_title = soup.select_one("meta[property='og:title']")
         titulo = limpar_texto(h1.get_text(" ", strip=True)) if h1 else ""
         if not titulo and og_title:
@@ -2424,7 +2436,9 @@ class ScraperAngoImoveis:
         while pagina <= CFG["max_paginas"]:
             url_pag = self._url_listagem(path, pagina)
             log.debug(f"    Pág {pagina}: {url_pag}")
+            print('inside while .............................')
             soup = self._get(url_pag)
+            print("while loof soup is ", soup)
             if not soup:
                 log.warning(f"    [AngoImóveis] Sem resposta na pág {pagina} — parar.")
                 break
@@ -3976,9 +3990,92 @@ class Scraper:
             self._delay()
 
         return resultados, False
+        
+    def executar_fonte(self, fonte, forcar=False, bairro_filtro=None, por_bairros=False):
 
-    def scraping_multifonte(self, db, bairro_filtro=None, por_bairros=False, forcar=False, fontes=None):
+        db = DB()
+        print( f'satrt {fonte}', threading.current_thread().name, time.strftime("%H:%M:%S"))
+        if fonte == "angocasa":
+            return ( fonte, self.scraping_completo( db, bairro_filtro=bairro_filtro, por_bairros=por_bairros, forcar=forcar,),)
+        if fonte == "remax":
+            scraper = ScraperRemax(db)
+        elif fonte == "angoimoveis":
+            scraper = ScraperAngoImoveis(db)
+        elif fonte == "mia":
+            scraper = ScraperMia(db)
+        elif fonte == "zenki":
+            scraper = ScraperZenki(db)
+        elif fonte == "ree_gera":
+            scraper = ScraperReeGera(db)
+        else:
+            print(f'End {fonte}', threading.current_thread().name, time.strftime("%H:%M:%S"))
+            return fonte, []
+        dados, _ = scraper.recolher(forcar=forcar)
+        return fonte, dados
+
+    def scraping_multifonte(self, bairro_filtro=None, por_bairros=False, forcar=False, fontes=None):
         """Executa AngoCasa + fontes extras selecionadas."""
+        inicio = time.time()
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$ inside scraping_multifonte")
+
+        fontes = fontes or ["angocasa"]
+        if "todas" in fontes or "all" in fontes:
+            fontes = FONTES_DISPONIVEIS
+        fontes = [f.lower().strip() for f in fontes if f]
+
+        stats_total = {
+            "n_novos": 0, "n_atualizados": 0, "n_preco_alt": 0,
+            "n_coletados": 0, "n_removidos": 0, "n_erros": 0,
+            "bairros_proc": "",
+        }
+        partes_proc=[]
+        with ThreadPoolExecutor(max_workers=min(len(fontes), 6)) as executor:
+
+            futures = {executor.submit(self.executar_fonte, fonte, forcar, bairro_filtro, por_bairros,): fonte for fonte in fontes}
+
+            for future in as_completed(futures):
+                fonte = futures[future]
+                try:
+                    _, result = future.result()
+
+                    if fonte == "angocasa":
+                        st = result
+                        for k in stats_total:
+                            if (k in st and isinstance(stats_total[k], int)):                                                        stats_total[k] += st[k]
+                        partes_proc.append(st.get("bairros_proc", "AngoCasa"))
+                    else:
+                        db = DB()
+                        self._processar_dados_lista( db,result, stats_total)
+                        partes_proc.append(fonte)
+                except Exception as e:
+                    log.error(f"Erro coleta {fonte}: {e}")
+                    stats_total["n_erros"] += 1
+
+        negocios = ["compra", "arrendamento"]
+        for f in fontes:
+            if f in ("angocasa", "remax", "angoimoveis", "mia", "zenki", "ree_gera"):
+                continue
+            if f not in FONTES_EXTRA:
+                log.warning(f"Fonte ignorada: {f}. Fontes disponíveis: {', '.join(FONTES_DISPONIVEIS)}")
+                continue
+            for negocio in negocios:
+                try:
+                    db = DB()
+                    dados_lista, _ = self.recolher_fonte_generica(f, negocio, forcar=forcar)
+                    self._processar_dados_lista(db, dados_lista, stats_total)
+                    partes_proc.append(f"{FONTES_EXTRA[f]['nome']}:{negocio}")
+                except Exception as e:
+                    log.error(f"Erro coleta {f}/{negocio}: {e}")
+                    stats_total["n_erros"] += 1
+           
+        stats_total["bairros_proc"] = "; ".join([p for p in partes_proc if p])
+        fim = time.time()
+        print(fonte, threading.current_thread().name, time.strftime("%H:%M:%S"))
+        print(f"Tempo total: {fim - inicio:.2f} segundos")
+        return stats_total
+    """
+    def scraping_multifonte(self, bairro_filtro=None, por_bairros=False, forcar=False, fontes=None):
+        Executa AngoCasa + fontes extras selecionadas.
         fontes = fontes or ["angocasa"]
         if "todas" in fontes or "all" in fontes:
             fontes = FONTES_DISPONIVEIS
@@ -4002,6 +4099,7 @@ class Scraper:
         # RE/MAX: scraper dedicado via API interna + detalhe SSR.
         # Não usar o coletor genérico, pois a listagem é React SPA.
         if "remax" in fontes:
+            db=DB()
             try:
                 scraper_remax = ScraperRemax(db)
                 dados_lista, _ = scraper_remax.recolher(forcar=forcar)
@@ -4014,6 +4112,7 @@ class Scraper:
         # AngoImóveis: scraper dedicado com URLs /category/venda e /category/alugar.
         # Não usar o coletor genérico, pois os caminhos e seletores são específicos.
         if "angoimoveis" in fontes:
+            db=DB()
             try:
                 scraper_ai = ScraperAngoImoveis(db)
                 dados_ai, _ = scraper_ai.recolher(forcar=forcar)
@@ -4026,6 +4125,7 @@ class Scraper:
         # MIA: scraper dedicado via API Supabase (RPC search_properties + REST properties).
         # Não usar o coletor genérico, pois o site é SPA e a listagem não é HTML estática.
         if "mia" in fontes:
+            db=DB()
             try:
                 scraper_mia = ScraperMia(db)
                 dados_mia, _ = scraper_mia.recolher(forcar=forcar)
@@ -4037,6 +4137,7 @@ class Scraper:
 
         # Zenki Real Estate: scraper dedicado via AJAX WordPress + detalhe SSR.
         if "zenki" in fontes:
+            db=DB()
             try:
                 scraper_zenki = ScraperZenki(db)
                 dados_zenki, _ = scraper_zenki.recolher(forcar=forcar)
@@ -4048,6 +4149,7 @@ class Scraper:
 
         # REE-GERA: scraper dedicado WordPress/wpResidence.
         if "ree_gera" in fontes:
+            db=DB()
             try:
                 scraper_rg = ScraperReeGera(db)
                 dados_rg, _ = scraper_rg.recolher(forcar=forcar)
@@ -4066,6 +4168,7 @@ class Scraper:
                 continue
             for negocio in negocios:
                 try:
+                    db = DB()
                     dados_lista, _ = self.recolher_fonte_generica(f, negocio, forcar=forcar)
                     self._processar_dados_lista(db, dados_lista, stats_total)
                     partes_proc.append(f"{FONTES_EXTRA[f]['nome']}:{negocio}")
@@ -4075,6 +4178,7 @@ class Scraper:
 
         stats_total["bairros_proc"] = "; ".join([p for p in partes_proc if p])
         return stats_total
+    """
 
     def scraping_completo(self, db, bairro_filtro=None, por_bairros=False, forcar=False):
         """
@@ -4261,7 +4365,7 @@ def _aplicar_formatacao_padrao(ws):
                     "email_agente", "segmento_imobiliario", "hash_dedupe", "id_zenki", "url_brochura", "pdf_brochura"}
 
     headers = {}
-    fcor col in range(1, ws.max_column + 1):
+    for col in range(1, ws.max_column + 1):
         valor = ws.cell(1, col).value
         headers[col] = str(valor).strip().lower() if valor is not None else ""
 
@@ -4272,7 +4376,7 @@ def _aplicar_formatacao_padrao(ws):
                 continue
             if campo in campos_valor:
                 _formatar_numero(cell, 2)
-            elif campo in campos_quantidade:
+            elif campo in ampos_quantidade:
                 _formatar_numero(cell, 0)
             elif isinstance(cell.value, (int, float)) and not isinstance(cell.value, bool):
                 casas = 0 if float(cell.value).is_integer() else 2
@@ -4642,10 +4746,11 @@ Exemplos:
     if args.scraping or executar_tudo:
         log.info("▶ SCRAPING — recolher anúncios")
         rid=db.iniciar_run("scraping")
+        print("the rid is ...................",rid)
         scraper=Scraper(db)
         try:
             fontes = [f.strip().lower() for f in args.fontes.split(",") if f.strip()]
-            stats=scraper.scraping_multifonte(db,bairro_filtro=args.bairro, por_bairros=args.por_bairros, forcar=args.forcar, fontes=fontes)
+            stats=scraper.scraping_multifonte(bairro_filtro=args.bairro, por_bairros=args.por_bairros, forcar=args.forcar, fontes=fontes)
             if stats:
                 log.info("─"*50)
                 log.info(f"  Coletados    : {stats['n_coletados']}")
@@ -4667,6 +4772,7 @@ Exemplos:
                 db.backup()
         except KeyboardInterrupt:
             log.warning("Scraping interrompido pelo utilizador.")
+            print("Scraping interrompido pelo utilizador........", rid)
             db.finalizar_run(rid,{"status":"interrompido","n_erros":1})
         except Exception as e:
             log.error(f"Erro fatal no scraping: {e}")

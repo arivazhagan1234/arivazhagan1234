@@ -1,0 +1,77 @@
+2026-07-13 19:30:25 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:30:25 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-13 19:30:25 [INFO    ] piia —   Início: 2026-07-13 19:30:25
+2026-07-13 19:30:25 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-13 19:30:25 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:30:26 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:30:26 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-13 19:30:27 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:30:28 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-07-13 19:30:28 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-07-13 19:30:42 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-07-13 19:30:46 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-07-13 19:30:46 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-07-13 19:31:37 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-13 19:31:38 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:31:38 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-13 19:31:38 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-13 19:31:38 [INFO    ] piia —   → Compra               : 5433
+2026-07-13 19:31:38 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-13 19:31:38 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-13 19:31:38 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-13 19:31:38 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-13 19:31:38 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:31:38 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-13 19:32:43 [INFO    ] piia —     RE/MAX pág 1/12: 0 extraídos (acum.: 0)
+2026-07-13 19:34:36 [INFO    ] piia —     RE/MAX pág 2/12: 0 extraídos (acum.: 0)
+2026-07-13 19:34:56 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:34:56 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-13 19:34:56 [INFO    ] piia —   Início: 2026-07-13 19:34:56
+2026-07-13 19:34:56 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-13 19:34:56 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:34:56 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:34:56 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-13 19:34:56 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:34:56 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-07-13 19:34:56 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-07-13 19:35:10 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-07-13 19:35:19 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-07-13 19:35:19 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-07-13 19:35:19 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 3
+2026-07-13 19:35:27 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-13 19:35:28 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:35:28 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-07-13 19:35:28 [INFO    ] piia —   Total anúncios activos : 5975
+2026-07-13 19:35:28 [INFO    ] piia —   → Compra               : 5433
+2026-07-13 19:35:28 [INFO    ] piia —   → Arrendamento         : 542
+2026-07-13 19:35:28 [INFO    ] piia —   Bairros com dados      : 181
+2026-07-13 19:35:28 [INFO    ] piia —   Hist. alterações preço : 0
+2026-07-13 19:35:28 [INFO    ] piia —   Última extração        : 2026-07-05T23:07:51.384999
+2026-07-13 19:35:28 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:35:28 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-07-13 19:37:25 [INFO    ] piia —     RE/MAX pág 3/12: 0 extraídos (acum.: 0)
+2026-07-13 19:39:41 [INFO    ] piia —     RE/MAX pág 4/12: 0 extraídos (acum.: 0)
+2026-07-13 19:53:19 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:53:19 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-07-13 19:53:19 [INFO    ] piia —   Início: 2026-07-13 19:53:19
+2026-07-13 19:53:19 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-07-13 19:53:19 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-07-13 19:53:20 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:53:20 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-07-13 19:53:20 [INFO    ] piia — ✅ Base de dados OK.
+2026-07-13 19:53:20 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-07-13 19:53:20 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-07-13 19:53:43 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-07-13 19:54:09 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-07-13 19:54:09 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-07-13 19:54:09 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 5
+2026-07-13 19:54:36 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-07-13 19:56:12 [INFO    ] piia —     RE/MAX pág 5/12: 0 extraídos (acum.: 0)
+2026-07-13 19:58:25 [INFO    ] piia —     RE/MAX pág 6/12: 0 extraídos (acum.: 0)
+2026-07-13 20:00:27 [INFO    ] piia —     RE/MAX pág 7/12: 0 extraídos (acum.: 0)
+2026-07-13 20:02:21 [INFO    ] piia —     RE/MAX pág 8/12: 0 extraídos (acum.: 0)
+2026-07-13 20:04:31 [INFO    ] piia —     RE/MAX pág 9/12: 0 extraídos (acum.: 0)
+2026-07-13 20:06:36 [INFO    ] piia —     RE/MAX pág 10/12: 0 extraídos (acum.: 0)
+2026-07-13 20:08:58 [INFO    ] piia —     RE/MAX pág 11/12: 0 extraídos (acum.: 0)
+2026-07-13 20:09:26 [INFO    ] piia —     RE/MAX pág 12/12: 0 extraídos (acum.: 0)
+2026-07-13 20:09:26 [INFO    ] piia —   ✔ RE/MAX Angola: 0 anúncios total
