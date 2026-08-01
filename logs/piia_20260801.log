@@ -1,0 +1,123 @@
+2026-08-01 17:07:46 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:07:46 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-08-01 17:07:46 [INFO    ] piia —   Início: 2026-08-01 17:07:46
+2026-08-01 17:07:46 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-08-01 17:07:46 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:07:46 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:07:46 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-08-01 17:07:46 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:07:46 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-08-01 17:07:46 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-08-01 17:07:55 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 1 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:07:58 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 2 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:08:03 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 3 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:08:03 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-08-01 17:08:05 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 1 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:08:08 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 2 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:08:12 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 3 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:08:12 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-08-01 17:08:12 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-08-01 17:10:02 [INFO    ] piia —     RE/MAX pág 1/12: 0 extraídos (acum.: 0)
+2026-08-01 17:11:58 [INFO    ] piia —     RE/MAX pág 2/12: 0 extraídos (acum.: 0)
+2026-08-01 17:12:36 [WARNING ] piia — Scraping interrompido pelo utilizador.
+2026-08-01 17:12:36 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:12:36 [INFO    ] piia —   RESUMO BASE DE DADOS
+2026-08-01 17:12:36 [INFO    ] piia —   Total anúncios activos : 6332
+2026-08-01 17:12:36 [INFO    ] piia —   → Compra               : 5433
+2026-08-01 17:12:36 [INFO    ] piia —   → Arrendamento         : 899
+2026-08-01 17:12:36 [INFO    ] piia —   Bairros com dados      : 181
+2026-08-01 17:12:36 [INFO    ] piia —   Hist. alterações preço : 1
+2026-08-01 17:12:36 [INFO    ] piia —   Última extração        : 2026-07-14T18:15:10.295099
+2026-08-01 17:12:36 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:12:36 [INFO    ] piia — ✅ PIIA Fase 1 concluída.
+2026-08-01 17:38:24 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:38:24 [INFO    ] piia —   PIIA v2.10 — Fase 1
+2026-08-01 17:38:24 [INFO    ] piia —   Início: 2026-08-01 17:38:24
+2026-08-01 17:38:24 [INFO    ] piia —   ROOT  : C:\Users\Admins\Desktop\sampleproject
+2026-08-01 17:38:24 [INFO    ] piia — ════════════════════════════════════════════════════════════
+2026-08-01 17:38:24 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia — ▶ SCRAPING — recolher anúncios
+2026-08-01 17:38:25 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 99
+2026-08-01 17:38:25 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia —   ▶ Luanda geral | compra
+2026-08-01 17:38:25 [INFO    ] piia —   ▶ AngoImóveis | compra
+2026-08-01 17:38:25 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia —   ▶ MIA | compra
+2026-08-01 17:38:25 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia —   ▶ RE/MAX Angola | compra
+2026-08-01 17:38:25 [INFO    ] piia — ✅ Base de dados OK.
+2026-08-01 17:38:25 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 25
+2026-08-01 17:38:25 [INFO    ] piia —   ▶ Zenki Real Estate | Luanda
+2026-08-01 17:38:39 [INFO    ] piia —     [MIA] compra — 42 anúncios (4 páginas de 12)
+2026-08-01 17:38:55 [INFO    ] piia —     [AngoImóveis] compra — 24 páginas detectadas
+2026-08-01 17:38:56 [WARNING ] piia — [RE/MAX] Rede ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | tentativa 1
+2026-08-01 17:39:00 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 1
+2026-08-01 17:39:25 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-08-01 17:39:44 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 1 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:39:45 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 2
+2026-08-01 17:39:46 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 2 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:39:50 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 3 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:39:50 [INFO    ] piia —     RE/MAX pág 25: sem links úteis.
+2026-08-01 17:39:54 [INFO    ] piia —     MIA pág 1/4: 12 extraídos (acum.: 12)
+2026-08-01 17:39:57 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 1 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:39:59 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 2 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:40:02 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t2
+2026-08-01 17:40:03 [WARNING ] piia — [RE/MAX] HTTP 400 | tentativa 3 | body: {"error":{"code":"","message":"Invalid expression: Could not find a property named 'CountryCode' on type 'search.complex.content'.\r\nParameter name: $filter"}}
+2026-08-01 17:40:03 [INFO    ] piia —     RE/MAX pág 26: sem links úteis.
+2026-08-01 17:40:03 [INFO    ] piia —   ▶ RE/MAX Angola | arrendamento
+2026-08-01 17:40:03 [INFO    ] piia —     [RE/MAX] Retomando do checkpoint: pág 3
+2026-08-01 17:40:12 [INFO    ] piia —   [Zenki] Total anunciado: 51 | pág 1: 6 cards
+2026-08-01 17:40:44 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t3
+2026-08-01 17:40:44 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/anuncios/venda/angola-luanda/mostrar-50/pagina-99/ordenar-normal/
+2026-08-01 17:40:44 [WARNING ] piia —     Sem resposta na pág 99 — parar coleta.
+2026-08-01 17:40:44 [INFO    ] piia —   ✔ Luanda geral/compra: 0 anúncios | completa=False
+2026-08-01 17:40:44 [INFO    ] piia —     [AngoCasa] Retomando do checkpoint: Luanda geral | pág 20
+2026-08-01 17:40:44 [INFO    ] piia —   ▶ Luanda geral | arrendamento
+2026-08-01 17:40:58 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 1
+2026-08-01 17:41:04 [INFO    ] piia —     MIA pág 2/4: 12 extraídos (acum.: 24)
+2026-08-01 17:41:15 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t1
+2026-08-01 17:41:41 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 2
+2026-08-01 17:41:54 [INFO    ] piia —     RE/MAX pág 3/12: 0 extraídos (acum.: 0)
+2026-08-01 17:41:58 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t2
+2026-08-01 17:42:26 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 3
+2026-08-01 17:42:26 [ERROR   ] piia — [Zenki] Falha definitiva: https://zenkirealestate.com/properties/complexo-misto/
+2026-08-01 17:42:30 [INFO    ] piia —     MIA pág 3/4: 12 extraídos (acum.: 36)
+2026-08-01 17:42:44 [WARNING ] piia — Rede HTTPSConnectionPool(host='www.angocasa.com', port=443): Read timed out. (read timeout=30) | t3
+2026-08-01 17:42:44 [ERROR   ] piia — Falha definitiva: https://www.angocasa.com/anuncios/arrenda/angola-luanda/mostrar-50/pagina-20/ordenar-normal/
+2026-08-01 17:42:44 [WARNING ] piia —     Sem resposta na pág 20 — parar coleta.
+2026-08-01 17:42:44 [INFO    ] piia —   ✔ Luanda geral/arrendamento: 0 anúncios | completa=False
+2026-08-01 17:43:03 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 1
+2026-08-01 17:43:13 [INFO    ] piia —     MIA pág 4/4: 6 extraídos (acum.: 42)
+2026-08-01 17:43:13 [INFO    ] piia —   ▶ MIA | arrendamento
+2026-08-01 17:43:14 [INFO    ] piia —     [MIA] arrendamento — 22 anúncios (2 páginas de 12)
+2026-08-01 17:44:01 [INFO    ] piia —     RE/MAX pág 4/12: 0 extraídos (acum.: 0)
+2026-08-01 17:44:42 [WARNING ] piia — [Zenki] Rede HTTPSConnectionPool(host='zenkirealestate.com', port=443): Read timed out. (read timeout=30) | tentativa 1
+2026-08-01 17:45:08 [INFO    ] piia —     MIA pág 1/2: 12 extraídos (acum.: 12)
+2026-08-01 17:45:58 [INFO    ] piia —   ✔ Zenki Real Estate: 5 anúncios extraídos de 6 cards
+2026-08-01 17:46:01 [INFO    ] piia —     MIA pág 2/2: 10 extraídos (acum.: 22)
+2026-08-01 17:46:02 [INFO    ] piia —   ✔ MIA: 64 anúncios total
+2026-08-01 17:46:04 [INFO    ] piia —     RE/MAX pág 5/12: 0 extraídos (acum.: 0)
+2026-08-01 17:47:07 [INFO    ] piia —     AngoImóveis pág 1/24: 35 extraídos (acum.: 35)
+2026-08-01 17:48:03 [INFO    ] piia —     RE/MAX pág 6/12: 0 extraídos (acum.: 0)
+2026-08-01 17:48:29 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 1
+2026-08-01 17:49:09 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 2
+2026-08-01 17:49:50 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. (read timeout=30) | tentativa 3
+2026-08-01 17:49:50 [ERROR   ] piia — [AngoImóveis] Falha definitiva: https://angoimoveis.com/luanda-oportunidade-comercial-unica-25206
+2026-08-01 17:50:23 [INFO    ] piia —     RE/MAX pág 7/12: 0 extraídos (acum.: 0)
+2026-08-01 17:50:29 [WARNING ] piia — [RE/MAX] Rede ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | tentativa 1
+2026-08-01 17:51:54 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 1
+2026-08-01 17:52:51 [INFO    ] piia —     RE/MAX pág 8/12: 0 extraídos (acum.: 0)
+2026-08-01 17:53:16 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 2
+2026-08-01 17:54:38 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 3
+2026-08-01 17:54:38 [ERROR   ] piia — [AngoImóveis] Falha definitiva: https://angoimoveis.com/vivenda-v3-no-condominio-jardins-do-nova-vida-com-quintal-duplo.-25204
+2026-08-01 17:55:08 [INFO    ] piia —     RE/MAX pág 9/12: 0 extraídos (acum.: 0)
+2026-08-01 17:55:32 [WARNING ] piia — [AngoImóveis] Rede HTTPSConnectionPool(host='angoimoveis.com', port=443): Read timed out. | tentativa 1
+2026-08-01 17:57:18 [INFO    ] piia —     RE/MAX pág 10/12: 0 extraídos (acum.: 0)
+2026-08-01 17:59:27 [INFO    ] piia —     RE/MAX pág 11/12: 0 extraídos (acum.: 0)
+2026-08-01 18:00:50 [INFO    ] piia —     RE/MAX pág 12/12: 0 extraídos (acum.: 0)
+2026-08-01 18:00:50 [INFO    ] piia —   ✔ RE/MAX Angola: 0 anúncios total
+2026-08-01 18:03:18 [INFO    ] piia —     AngoImóveis pág 2/24: 32 extraídos (acum.: 67)
+2026-08-01 18:13:52 [INFO    ] piia —     AngoImóveis pág 3/24: 35 extraídos (acum.: 102)
+2026-08-01 18:22:19 [INFO    ] piia —     AngoImóveis pág 4/24: 34 extraídos (acum.: 136)
+2026-08-01 18:24:23 [WARNING ] piia — Scraping interrompido pelo utilizador.

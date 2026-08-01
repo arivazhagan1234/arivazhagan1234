@@ -1,6 +1,6 @@
 from urllib.parse import urlparse, urlunparse, urljoin
 import requests
-import time
+import time, random
 from pathlib import Path
 import re
 from bs4 import BeautifulSoup
@@ -10,10 +10,12 @@ import logging
 PROJECTROOT=Path.cwd()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s-%(levelname)s-%(filename)s-%(message)s")
 
+
 base="https://angoimoveis.com/"
+CNFG: dict= {"SAVE_HTML": True, "TIME_OUT":20, "MAX_RETRY":4, "DEBUG": PROJECTROOT / "debug_html", "DELAY_MIN":3, "DELAY_MAX":5, "TEXTLIMIT":1000}
 
 
-urls=["//fonts.gstatic.com","/cdn-cgi/l/email-protection#452c2b232a05242b222a2c282a33202c366b262a28",'https://angoimoveis.com/search','https://angoimoveis.com/search?l=71&amp;c=16','https://www.Angoimoveis.com/category/venda?page=2', 'https://angoimoveis.com/vivenda-v6-anexo-vila-alice-luanda-25197', 'https://angoimoveis.com/terreno-60-30-zango-8000-25199']
+urls=['https://angoimoveis.com/search','https://angoimoveis.com/search?l=71&amp;c=16','https://www.Angoimoveis.com/category/venda?page=2', 'https://angoimoveis.com/vivenda-v6-anexo-vila-alice-luanda-25197', 'https://angoimoveis.com/terreno-60-30-zango-8000-25199']
 
 def urlreform(url, base):
     ex=('angoimoveis.com', 'venda')
@@ -38,8 +40,6 @@ def baseurl(url):
         print("The exception", url )
         return ""
 
-CNFG: dict= {"SAVE_HTML": True, "TIME_OUT":20, "MAX_RETRY":4, "DEBUG": PROJECTROOT / "debug_html"}
-
 def ses():
     s=requests.Session()
     s.headers.update({"User-Agent":(
@@ -49,14 +49,15 @@ def ses():
         "Accept-Language": "pt-PT,pt;q=0.9,en;q=0.8",
         "Origin": base})
     return s
-
+    
 
 def _get(s,url):
     for t in range(1,CNFG["MAX_RETRY"]+1):
-              #print("in range Url r ,,,,,,,,,", r)
+              
        try:
           r=s.get(url, timeout=CNFG["TIME_OUT"])
           #raise requests.exceptions.RequestException ("this is test exception")
+          logging.info(f'the status code is {r.status_code}')
           r.raise_for_status()
           if CNFG["SAVE_HTML"]== True:
              d=CNFG["DEBUG"]; d.mkdir(parents=True, exist_ok=True)
@@ -74,17 +75,63 @@ def _get(s,url):
        if t <= CNFG["MAX_RETRY"]: time.sleep(5*t) 
     return None        
           
+def delay():
+    time.sleep(random.uniform(CNFG['DELAY_MIN', CNFG['DELAY_MAX']]))
+
+
+inputstr="Imóveis a  venda e imóveis para alugar. Na                     Angoimoveis você encontra anúncios               classificados de imóveis para compra, venda ou aluguel em Angola. óveis a venda e imóveis para alugar. Na Angoimoveis você encontra anúncios classificados de imóveis para compra, venda ou aluguel em Angola."
+
+def reformtext(text, Textlimit=None):
+   
+    if not isinstance(text, str) or text in ("", None):
+        return
+    s=re.sub(r'\s+', ' ', text)
+    return s[:Textlimit]  if s not in ("", None) else s
+
+
+def contentreform(cont):
+    textcont=[]
+    
+    def work(cont):
+        if len(' '.join(textcont)) > CNFG["TEXTLIMIT"]:
+                return
+        if isinstance(cont, dict):
+            for k, v in cont.itens():
+                lk=k.lower()
+                if lk in ("url", "logo", "sameAs", "shortLinks", "ShortLinks"): continue
+                print("content is .............", k)
+                work(v)
+        elif isinstance(cont, list):
+
+            for val in cont:
+                if val in ("url", "logo", "sameAs", "shortLinks", "ShortLinks"): continue
+                print("content is .............", val)
+                work(val)
+        elif isinstance(cont, (str, float, "")):
+            newfornmtext = reformtext(cont, 200)
+            textcont.append(newfornmtext)
+    work(cont)
+        
+    return " ".join(textcont) or " "
+
+reformedurl=[]
 for url in urls:
-    #url='https://angoimoveis.com/search?l=71&amp;c=1686'
-    reformedurl=[]
     absurls=urlreform(url, base)
     if absurls not in ("", None): reformedurl.append(absurls)
     reformedurl=list(dict.fromkeys(reformedurl))
-    print("reforedurl,,,,,,,,,,,,,,", reformedurl)
-    for url in reformedurl:
-        s=ses()
-        soup=_get(s,absurls)
-        print("the value url............",absurls)
-        print(soup.select_one('h1'))
 
- 
+print( " reformurl", reformedurl)
+for url in reformedurl:
+    print("Theemabsbsnbas", url)
+    s=ses()
+    soup=_get(s, url)
+    if soup in ("", None):
+        continue
+    
+    h1=soup.select_one('h1') or soup.select_one('h2')
+
+    print("the hi tags....", h1)
+    resultext=contentreform(h1.get_text(" ", strip=True)) if h1 else urlparse.path.strip('/').splite('/').replace("-", " ").title()
+    print(" the resulttext is", resultext)
+    ("resultext............",h1.get_text("", strip = True))
+     soup
