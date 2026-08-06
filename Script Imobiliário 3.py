@@ -588,7 +588,9 @@ class DB:
 def norm_num(txt):
     if not txt: return None
     s = re.sub(r"[^\d,.]","",str(txt).strip())
+    
     if not re.search(r"\d",s): return None
+
     if "," in s and "." in s:
         s=s.replace(".","").replace(",",".")
     elif "," in s and s.index(",") < len(s)-4:

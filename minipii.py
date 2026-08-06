@@ -1,3 +1,4 @@
+import select
 from urllib.parse import urlparse, urlunparse, urljoin
 import requests
 import time, random
@@ -5,6 +6,7 @@ from pathlib import Path
 import re
 from bs4 import BeautifulSoup
 import logging
+import sqlite3
 
 
 PROJECTROOT=Path.cwd()
@@ -12,8 +14,17 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s-%(levelname)s-%(file
 
 
 base="https://angoimoveis.com/"
-CNFG: dict= {"SAVE_HTML": True, "TIME_OUT":20, "MAX_RETRY":4, "DEBUG": PROJECTROOT / "debug_html", "DELAY_MIN":3, "DELAY_MAX":5, "TEXTLIMIT":1000}
+CNFG: dict= {"ROOT": PROJECTROOT, "SAVE_HTML": True, "TIME_OUT":20, "MAX_RETRY":4, "DEBUG": PROJECTROOT / "debug_html", "DELAY_MIN":3, "DELAY_MAX":5, "TEXTLIMIT":1000}
 
+def _con():
+    c = sqlite3.connect(CNFG["ROOT"] / "mybio.db")
+    c.row_factory = sqlite3.Row
+    c.execute("pragma journal_mode = WAL")
+    c.execute("pragma foreign_keys = ON")
+    return c
+
+
+"""
 
 urls=['https://angoimoveis.com/search','https://angoimoveis.com/search?l=71&amp;c=16','https://www.Angoimoveis.com/category/venda?page=2', 'https://angoimoveis.com/vivenda-v6-anexo-vila-alice-luanda-25197', 'https://angoimoveis.com/terreno-60-30-zango-8000-25199']
 
@@ -61,7 +72,7 @@ def _get(s,url):
           r.raise_for_status()
           if CNFG["SAVE_HTML"]== True:
              d=CNFG["DEBUG"]; d.mkdir(parents=True, exist_ok=True)
-             fpt=re.sub(r"[^\w]", ' ', url)
+             fpt=re.sub(r"[^w]", ' ', url)
              (d/f'{fpt}.html').write_text(r.text, 'utf-8')    
           return BeautifulSoup(r.text, 'lxml')
        except requests.exceptions.HTTPError as e:
@@ -85,7 +96,7 @@ def reformtext(text, Textlimit=None):
    
     if not isinstance(text, str) or text in ("", None):
         return
-    s=re.sub(r'\s+', ' ', text)
+    s=re.sub(r's+', ' ', text)
     return s[:Textlimit]  if s not in ("", None) else s
 
 
@@ -134,4 +145,117 @@ for url in reformedurl:
     resultext=contentreform(h1.get_text(" ", strip=True)) if h1 else urlparse.path.strip('/').splite('/').replace("-", " ").title()
     print(" the resulttext is", resultext)
     ("resultext............",h1.get_text("", strip = True))
-     soup
+    
+
+obj={ "@context": "https://schema.org", "@type": "WebPage", "url": "https://angoimoveis.com/", "description": "Imóveis a venda e imóveis para alugar. Na Angoimoveis você encontra anúncios classificados de imóveis para compra, venda ou aluguel em Angola.", "inLanguage": "pt", "isPartOf": { "@type": "WebSite", "name": "Angoimoveis", "description": "Imóveis a venda e imóveis para alugar. Na Angoimoveis você encontra anúncios classificados de imóveis para compra, venda ou aluguel em Angola.", "url": "https://angoimoveis.com/" }, "about": { "@type": "Organization", "name": "Angoimoveis", "foundingDate": "2023", "alternateName": [ "angoimoveis", "angoimoveis.com", "angoimoveis angola", "comprar e vender imoveis", "imobiliarias em angola" ], "url": "https://angoimoveis.com/", "logo": "https://angoimoveis.com/images/icone.png", "sameAs": [ "https://www.facebook.com/angoimoveis.ao/", "https://www.instagram.com/ango.imoveis/" ], "brand": ({ "@type": "Brand", "name": "Angoimoveis" }), "address": { "@type": "PostalAddress", "addressLocality": "Urbanização Nova, Rua 181, Casa 6024", "addressRegion": "Luanda", "postalCode": "1100-240", "addressCountry": { "@type": "Country", "name": "Angola" } }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "areaServed": "AO", "availableLanguage": "Português", "email": "info@angoimoveis.com" } }, "contentLocation": { "@type": "Country", "name": "AO" }}
+
+def iter_json(cont, default=None):
+
+    logging.info(f"the type cont is {type(cont)}")
+    if not isinstance(cont, (dict, list)):
+        logging.info(" cont is not in (dict, list)")
+        return default
+    
+    logging.info(f"iter_jon: {cont}")
+    
+    if isinstance(cont, dict):
+        yield cont
+        logging.info(f"yield1 iter_jon: {cont}")
+        for v in cont.values():
+            logging.info(f"yield2 iter_jon: {v}")   
+            yield from iter_json(v)
+    elif isinstance(cont, list):
+        logging.info(f"yield3 iter_jon: {cont}")
+        for v in cont:
+            logging.info(f"yield4 iter_jon: {v}")
+            yield from iter_json(v)
+
+
+def deepval(obj, *keys):
+
+    resultdict={}
+
+    wanted = {str(k).lower(): k for k in keys}
+
+    for data in iter_json(obj):
+    
+        logging.info(f"the data is {data}")
+        low={ str(k).lower() : k for k in data.keys()}
+        logging.info(f"the data keys {low}")
+
+        for k in wanted.keys():
+            real=low.get(k)
+            if real is not None and data.get(real) not in (None, "", {}, []):
+                logging.info(f"the real key is {real} : {data.get(real)}")     
+                resultdict[real] = data.get(real)                   
+    return resultdict
+
+result=deepval(obj, "AddressRegion", "name", "availableLanguage")
+print("The result of ----------------------", result)
+
+texts= [" 200.000,000 KZ  ", "200.000.000 KZ", "850,000.000 KZ.",  " 333.000.000  KZ"]
+
+
+def norm_text(text):
+    if not isinstance(text, str) or text in ("", None):
+        logging.warning(f"norm_text: text is not a string or is empty: {text}")
+        return ""
+    s=re.sub(r"[^d,.]", '', str(text).strip())
+
+    if not re.search(r"d", s): return None
+
+    if "," in s and "." in s:
+        logging.warning(f"norm_text: text contains both ',' and '.': {s}")
+        if s.rfind(",") > s.rfind("."):
+                logging.warning(f"norm_text: text contains both ',' and '.' with ',' after '.': {s}")
+                s=s.replace(".", "").replace(",", ".")
+        else:
+            logging.warning(f"norm_text: text contains both ',' and '.' with '.' after ',': {s}")   
+            s=s.replace(",", "")
+    elif "," in s:
+        logging.warning(f"norm_text: text contains ',': {s}")
+        s=s.replace(",", ".")
+    elif s.count(".") > 1:
+        logging.warning(f"norm_text: text contains multiple '.': {s}")
+        s = s.replace(".", "")
+    elif s.count(",") > 1:
+        logging.warning(f"norm_text: text contains multiple ',': {s}")
+        s = s.replace(",", "")
+    if s.endswith("."):
+        logging.warning(f"norm_text: text ends with '.': {s}")
+        s = s[:-1]
+    try: 
+        return float(s)
+    except Exception as e:
+        logging.warning(f"norm_text: {e}")
+        return None
+
+for text in texts:
+    pricevalue = norm_text(text)
+    print(f"The price value for '{text}' is {pricevalue}")
+
+"""
+data = { "name": "Ariva"}
+def get_all(data=None):
+    q = "select * from bio where gender = 'male'"; p=[]
+    c = _con()
+   
+    if data is not None:
+       logging.info("data is not none")
+
+       for col in ("name", "age", "gender"):
+           if col in data: q += f" and {col} = ?"; p.append(data[col])
+           logging.warning(f"data condiction inside  {col} : {q} {p}")
+    q += " order by id desc"
+    
+    try:
+        cur = c.cursor(); cur.execute(q, p)
+        return [dict(row) for row in cur.fetchall()]
+    except Exception as e:
+        logging.warning(f"get_all: {e}")
+        return []
+    finally:
+        c.close()
+
+result=get_all(data)
+print(result)
