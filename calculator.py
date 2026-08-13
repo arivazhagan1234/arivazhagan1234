@@ -47,7 +47,10 @@ def Div(*user_inputs):
 try: 
     user_choice=input("Enter the any options in ADD, SUB, MUL, DIV : ")
     option=user_choice.upper()
-    user_inputs= list(map(int, input("Enter the numbers: ").split( )))
+    #= list(map(int, input("Enter the numbers: ").split( )))
+    user_inputs = list( map(int, input( " enter the any numbers: ").split( )))
+    type(user_inputs)
+    print(user_inputs)
 
     if option in ['ADD', '+']:
        print(f'Addition of {user_inputs} is :', Add(*user_inputs)) 
@@ -60,6 +63,7 @@ try:
     else:
         print("Please select any of the options in ('ADD', 'SUB', 'MUL', '+', '-', '*')")
 except Exception as e:
-    print(e)
+    if not e:
+        print(e)
 finally:
     print("Execution is completed!!!")

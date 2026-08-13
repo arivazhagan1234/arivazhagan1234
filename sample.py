@@ -11,6 +11,8 @@ import requests
 import certifi  
 import lxml
 from bs4 import BeautifulSoup
+from urllib.parse import urlparse, urljoin, urlunparse
+
 """
 
 from urllib.parse  import urlparse, urljoin, urlunparse
@@ -79,7 +81,7 @@ for item in data['value']:
     print(content.get('TitleAddress'))
     print(content.get('City'))
 
-"""
+
 url='https://angoimoveis.com/category/venda'
 ses=requests.Session()
 ses.headers.update({'User-Agent': 'Mozilla/5.0 (windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'})
@@ -88,3 +90,11 @@ print(response.status_code)
 soup=BeautifulSoup(response.text, "lxml")
 print(soup.prettify())
 #print(soup.select_one('City'))
+"""
+payload={'search': "angola luanda", 'top': '10', 'skip': '0', 'count': True, 'queryType': 'simple', 'filter': 'content/TransactionTypeUID eq 260'}
+
+url='https://www.remax-multitrust.co.ao/search/listing-search/docs/search'
+
+header={'Authorization' : 'Bearer 2c7e3f0b-1d4e-4a5f-8c9b-6e5f3d2e1a4b'}
+response = requests.get(url, payload=payload, headers=header)
+print(response.status_code)

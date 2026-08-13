@@ -1,20 +1,29 @@
 from os import name
 import os
+import parser
 import openpyxl
-
+from bs4 import BeautifulSoup
 import requests
 from bs4 import BeautifulSoup
 import time
 from selenium import webdriver   
+from selenium import webdriver
+import sqlite3
 import sqlite3
 url = "https://www.remax-multitrust.co.ao/"
-"""  
+
 def get_remax_listings(url):
     driver=webdriver.Chrome()
+    driver = webdriver.Chrome()
+    driver.get(url)
     driver.get(url)
     driver.maximize_window()
+    driver.maximize_window()
     time.sleep(7)
+    time.sleep(7)
+    html = driver.page_source
     html=driver.page_source
+    soup = BeautifulSoup(html, "html.parser")
     soup = BeautifulSoup(html, "html.parser")
    
     h1_tags = soup.find_all("h1")
@@ -28,10 +37,11 @@ def get_remax_listings(url):
         titles.append(tag.get_text(strip=True))
 
     return titles
-]-.?: d.ēA.]/
+
 
 titles = get_remax_listings(url)
 
+"""
 con=sqlite3.connect("mybio.db")
 con.row_factory= sqlite3.Row
 
@@ -52,7 +62,7 @@ def get_table_val(qinfo=None):
 result=get_table_val()
 con.close()
 print(result)
-"""
+
 con=sqlite3.connect("mybio.db")
 con.row_factory=sqlite3.Row
 cursor=con.cursor()
@@ -61,8 +71,13 @@ def get_table_val(qinfo=None):
     c=cursor.execute(q)
     return [dict(r) for r in c.fetchall()]
 wb=openpyxl.Workbook()
+wb = openpyxl.Workbook()
+
+root = os.path.join(os.getcwd(), "mybio.xlsx")
 root=os.path.join(os.getcwd(), "mybio.xlsx")
 wb.create_sheet(title="bio",index=0)
+wb.create_sheet(title="bio",index=0)
+ws = wb.active
 ws=wb.active
 
 columns=["name","age","gender","cell_num",'Address','Email'] 
@@ -74,9 +89,7 @@ for v in val:
 
 wb.save(root)
 con.close()
-
-
-
+"""
 
 
 
